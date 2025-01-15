@@ -2,9 +2,10 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\rentController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/dashboard', function () {
@@ -20,5 +21,11 @@ Route::middleware('auth')->group(function () {
 Route::get('/order', function () {
     return view('order');
 })->middleware(['auth', 'verified'])->name('order');
+
+Route::get('/home', [rentController::class, 'home'])->name('home');
+Route::get('/rent', [rentController::class, 'rent'])->name('rent');
+Route::get('/aboutus', [rentController::class, 'aboutus'])->name('aboutus');
+Route::get('/testimoni', [rentController::class, 'testimoni'])->name('testimoni');
+Route::get('/information', [rentController::class, 'information'])->name('information');
 
 require __DIR__.'/auth.php';

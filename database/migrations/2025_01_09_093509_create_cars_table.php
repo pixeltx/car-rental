@@ -15,7 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('car_name');
             $table->string('car_model');
-            $table->string('seat_capacity');
+            $table->string('car_plate');
+            $table->unsignedInteger('seat_capacity');
+            $table->unsignedBigInteger('price');
+            $table->boolean('availability')->default(true);
+            $table->date('rental_start_date')->nullable();
+            $table->date('rental_end_date')->nullable();
             $table->timestamps();
         });
     }
