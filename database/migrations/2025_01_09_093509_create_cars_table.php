@@ -14,13 +14,15 @@ return new class extends Migration
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
             $table->string('car_name');
-            $table->string('car_model');
-            $table->string('car_plate');
+            $table->unsignedBigInteger('brand_id');
+            $table->unsignedBigInteger('model_id');
+            // $table->string('car_plate');
+            $table->string('image');
+            $table->string('transmission');
+            $table->integer('engine_capacity');
             $table->unsignedInteger('seat_capacity');
             $table->unsignedBigInteger('price');
-            $table->boolean('availability')->default(true);
-            $table->date('rental_start_date')->nullable();
-            $table->date('rental_end_date')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

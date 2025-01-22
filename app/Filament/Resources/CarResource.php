@@ -8,7 +8,11 @@ use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\CarResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -20,23 +24,62 @@ class CarResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-truck';
 
+    public static function getLabel(): string
+    {
+        return 'Kendaraan';
+    }
+
+    public static function getPluralLabel(): string
+    {
+        return 'Kendaraan';
+    }
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 TextInput::make('car_name')
-                    ->label('Car Name')
+                    ->label('Nama Mobil')
                     ->required(),
-                TextInput::make('car_model'),
-                TextInput::make('car_plate'),
+                Select::make('brand_id')
+                    ->label('Brand')
+                    ->relationship('brand', 'brand_name')
+                    ->required(),
+                Select::make('model_id')
+                    ->label('Model Mobil')
+                    ->relationship('model', 'model_name')
+                    ->required(),
+                TextInput::make('car_plate')
+                    ->label('Plat Mobil')
+                    ->required(),
+                FileUpload::make('image')
+                    ->label('Gambar Mobil')
+                    ->image()
+                    ->directory('uploads/cars') //Direktori penyimpanan gambar mobil
+                    ->maxSize(2048) //Batas ukuran file dalam KB
+                    ->required(),
+                Select::make('transmission')
+                    ->label('Transmisi')
+                    ->options([
+                        'automatic' => 'Automatic',
+                        'manual' => 'Manual',
+                        'at/mt' => 'AT/MT',
+                    ])
+                    ->required(),
+                TextInput::make('engine_capacity')
+                    ->label('Kapasitas Mesin (CC)')
+                    ->numeric()
+                    ->required(),
                 TextInput::make('seat_capacity')
-                    ->label('Seat Capacity')
+                    ->label('Kapasitas Kursi')
                     ->numeric()
                     ->required(),
                 TextInput::make('price')
-                    ->label('Price')
+                    ->label('Harga')
                     ->numeric()
                     ->required(),
+                Textarea::make('description')
+                    ->label('Deskripsi'),
             ]);
     }
 
@@ -44,7 +87,16 @@ class CarResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('car_name')->label('Car Name')
+                    ->searchable()
+                    ->sortable(),
+                TextColumn::make('brand.brand_name')->label('Brand'),
+                TextColumn::make('model.model_name')->label('Model'),
+                TextColumn::make('car_plate')->label('Car Plate'),
+                TextColumn::make('transmission')->label('Transmission'),
+                TextColumn::make('engine_capacity')->label('Engine Capacity'),
+                TextColumn::make('seat_capacity')->label('Seat Capacity'),
+                TextColumn::make('price')->label('Price'),
             ])
             ->filters([
                 //
