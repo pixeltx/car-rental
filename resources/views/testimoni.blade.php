@@ -2,7 +2,7 @@
     <div class="z-10">
         <div class="">
             <div class="flex flex-col justify-center items-center text-center space-y-4 px-4 md:px-16 lg:px-32 py-8 my-5 md:my-10">
-                <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] drop-shadow-lg">
+                <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] md:drop-shadow-lg">
                     TESTIMONI
                 </div>
                 <div class="text-sm md:text-lg lg:text-xl text-customGreen font-semibold leading-relaxed">
@@ -16,24 +16,26 @@
         <div class="px-4 md:px-10">
             <div class="swiper mb-10">
                 <div class="wrapper overflow-hidden mx-10">
-                    <div class="flex md:gap-2 swiper-wrapper">   
+                    <div class="flex md:gap-2 swiper-wrapper">
+                        @foreach ($testimonies as $testimony)
                         <div class="swiper-slide">
-                            <img src="{{ asset('img/dummyImage.jpg') }}" alt="">
+                            <img src="{{ asset('storage/' . $testimony->image) }}" alt="" class="w-[27rem] h-[16rem] object-cover">
+                        </div>
+                        @endforeach
+                        <div class="swiper-slide">
+                            <img src="{{ asset('img/dummyImage.jpg') }}" alt="" class="w-[27rem] h-[16rem] object-cover">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('img/dummyImage.jpg') }}" alt="">
+                            <img src="{{ asset('img/dummyImage.jpg') }}" alt="" class="w-[27rem] h-[16rem] object-cover">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('img/dummyImage.jpg') }}" alt="">
+                            <img src="{{ asset('img/dummyImage.jpg') }}" alt="" class="w-[27rem] h-[16rem] object-cover">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('img/dummyImage.jpg') }}" alt="">
+                            <img src="{{ asset('img/dummyImage.jpg') }}" alt="" class="w-[27rem] h-[16rem] object-cover">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('img/dummyImage.jpg') }}" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="{{ asset('img/dummyImage.jpg') }}" alt="">
+                            <img src="{{ asset('img/dummyImage.jpg') }}" alt="" class="w-[27rem] h-[16rem] object-cover">
                         </div>
                     </div>
                     <div class="pt-10">
@@ -43,8 +45,10 @@
                     {{-- <div class="flex justify-center items-center">
                         <div class="swiper-pagination"></div>
                     </div> --}}
-                    <div class="swiper-button-prev "></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="">
+                        <div class="swiper-button-prev "></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
                     {{-- <div class="flex justify-center items-center py-5 gap-4">
                         <div class="swiper-button-prev">
                             <svg class="w-[35px] h-[35px] fill-customGreen" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
@@ -61,4 +65,5 @@
             </div>
         </div>
     </div>
+    @vite('resources/js/slide-testimoni.js')
 </x-app>

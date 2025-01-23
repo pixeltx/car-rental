@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Car;
+use App\Models\Gallery;
 
-class rentController extends Controller
+class HomeController extends Controller
 {
     public function index()
     {
         $cars = Car::with(['brand', 'model'])->get();
-        return view('rent', compact('cars'));
+        $galleries = Gallery::all();
+        return view('index', compact('cars', 'galleries'));
     }
 }

@@ -14,7 +14,9 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Tables\Actions\RestoreAction;
 use App\Filament\Resources\CarResource\Pages;
+use Filament\Tables\Actions\RestoreBulkAction;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\CarResource\RelationManagers;
 
@@ -61,9 +63,9 @@ class CarResource extends Resource
                 Select::make('transmission')
                     ->label('Transmisi')
                     ->options([
-                        'automatic' => 'Automatic',
-                        'manual' => 'Manual',
-                        'at/mt' => 'AT/MT',
+                        'Automatic' => 'Automatic',
+                        'Manual' => 'Manual',
+                        'AT/MT' => 'AT/MT',
                     ])
                     ->required(),
                 TextInput::make('engine_capacity')
@@ -75,7 +77,7 @@ class CarResource extends Resource
                     ->numeric()
                     ->required(),
                 TextInput::make('price')
-                    ->label('Harga')
+                    ->label('Harga / Hari')
                     ->numeric()
                     ->required(),
                 Textarea::make('description')

@@ -1,5 +1,4 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
-import forms from '@tailwindcss/forms';
+import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -23,6 +22,9 @@ export default {
                 gold: "#D5BA8F",
                 bigTitle: "#deaf37",
                 textGreen: "#4b5320",
+                newGreen: "#3e8e41",
+                newGold: "#ffc403",
+                putih: "#fffdf9",
             },
             spacing: {
                 100: "75rem",
@@ -34,9 +36,7 @@ export default {
                 105: "50rem",
                 106: "33rem",
             },
-            backgroundImage: {
-                
-              }
+            backgroundImage: {},
         },
     },
     plugins: [require("flowbite/plugin")],

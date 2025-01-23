@@ -52,4 +52,10 @@ class Car extends Model
     {
         return $this->belongsTo(CarModel::class);
     }
+
+    // Accessor to get the image URL
+    public function getImageUrlAttribute()
+    {
+        return Storage::disk('public')->url($this->image);
+    }
 }
