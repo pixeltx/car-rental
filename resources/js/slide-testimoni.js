@@ -17,6 +17,9 @@ new Swiper(".wrapper", {
         0: {
             slidesPerView: 1,
         },
+        541: {
+            slidesPerView: 2,
+        },
         768: {
             slidesPerView: 3,
         },

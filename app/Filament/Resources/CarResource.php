@@ -51,9 +51,8 @@ class CarResource extends Resource
                     ->label('Model Mobil')
                     ->relationship('model', 'model_name')
                     ->required(),
-                TextInput::make('car_plate')
-                    ->label('Plat Mobil')
-                    ->required(),
+                // TextInput::make('car_plate')
+                //     ->label('Plat Mobil'),
                 FileUpload::make('image')
                     ->label('Gambar Mobil')
                     ->image()
@@ -94,7 +93,7 @@ class CarResource extends Resource
                     ->sortable(),
                 TextColumn::make('brand.brand_name')->label('Brand'),
                 TextColumn::make('model.model_name')->label('Model'),
-                TextColumn::make('car_plate')->label('Car Plate'),
+                // TextColumn::make('car_plate')->label('Car Plate'),
                 TextColumn::make('transmission')->label('Transmission'),
                 TextColumn::make('engine_capacity')->label('Engine Capacity'),
                 TextColumn::make('seat_capacity')->label('Seat Capacity'),

@@ -1,19 +1,19 @@
 <div>
-    <div class="font-[Poppins]">
+    <div class="">
         <!-- Navbar -->
-        <header id="navbar" class="bg-newGreen w-full z-50 transition duration-300">
+        <header id="navbar" class="bg-newGreen w-full z-50 fixed top-0 transition-transform duration-500 ease-in-out">
             <nav class="flex justify-between items-center w-full shadow-md md:px-16 px-2">
                 <!-- Logo dan Brand -->
                 <a href="{{ route('index') }}" class="flex justify-center items-center gap-2">
                     <img class="w-14 my-3 cursor-pointer" src="{{ asset('img/Logo.png') }}" alt="Logo">
-                    <div class="text-baseBackground  text-lg">
+                    <div class="text-baseBackground text-lg">
                         BrightGlobaltrans
                     </div>
                 </a>
 
                 <!-- Navigation Links -->
-                <div class="nav-links md:static absolute bg-newGreen md:min-h-fit min-h-[60vh] left-0 top-0 md:w-auto w-full flex items-center px-5 md:translate-x-0 transform -translate-x-full duration-300">
-                    <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-baseBackground">
+                <div class="nav-links lg:static absolute bg-newGreen lg:min-h-fit min-h-[50vh] md:min-h-[30vh] left-0 top-0 lg:w-auto w-full flex items-center px-5 lg:translate-x-0 transform -translate-x-full duration-300">
+                    <ul class="flex lg:flex-row flex-col lg:items-center lg:gap-[4vw] gap-8 text-baseBackground">
                         <li>
                             <a href="{{ route('index') }}" class="relative group {{ request()->routeIs('index') ? 'text-newGold ' : '' }}">
                                 Home
@@ -44,21 +44,15 @@
                                 <span class="absolute left-0 bottom-0 h-[2px] bg-newGold transition-all duration-300 {{ request()->routeIs('information') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                             </a>
                         </li>
-                        <li>
-                            <a href="{{ route('blog') }}" class="relative group {{ request()->routeIs('blog') ? 'text-newGold ' : '' }}">
-                                Blog
-                                <span class="absolute left-0 bottom-0 h-[2px] bg-newGold transition-all duration-300 {{ request()->routeIs('blog') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
-                            </a>
-                        </li>
                     </ul>
                 </div>
 
                 <!-- Kontak Button & Hamburger Icon -->
-                <div class="flex items-center gap-2 md:gap-6 ">
+                <div class="flex items-center gap-2 lg:gap-6">
                     <a href="https://wa.me/+6281214955293" class="bg-newGold text-putih border-2 border-newGold hover:bg-transparent hover:text-newGold px-5 py-2 rounded-full transition duration-300">
                         Kontak
                     </a>
-                    <ion-icon name="menu" class="text-3xl cursor-pointer md:hidden text-baseBackground" onclick="toggleMenu()"></ion-icon>
+                    <ion-icon name="menu" class="text-3xl cursor-pointer lg:hidden text-baseBackground" onclick="toggleMenu()"></ion-icon>
                 </div>
             </nav>
         </header>
@@ -67,20 +61,25 @@
     <!-- Script -->
     <script>
         const navbar = document.getElementById('navbar');
-        const stickyOffset = navbar.offsetTop;
+        let lastScrollY = window.scrollY;
+        let isNavbarHidden = false;
 
-        // Add scroll event listener
+        // Scroll event listener
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > stickyOffset) {
-                navbar.style.position = 'fixed';
-                navbar.style.top = '0';
-                navbar.style.left = '0';
-                navbar.style.width = '100%';
-                navbar.classList.add('shadow-lg'); // Optional: Add shadow when sticky
-            } else {
-                navbar.style.position = 'static';
-                navbar.classList.remove('shadow-lg');
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY && !isNavbarHidden) {
+                // Scroll ke bawah dan navbar sedang terlihat -> sembunyikan
+                navbar.style.transform = 'translateY(-100%)';
+                isNavbarHidden = true;
+            } else if (currentScrollY < lastScrollY && isNavbarHidden) {
+                // Scroll ke atas dan navbar tersembunyi -> munculkan
+                navbar.style.transform = 'translateY(0)';
+                isNavbarHidden = false;
             }
+
+            // Update posisi scroll terakhir
+            lastScrollY = currentScrollY;
         });
 
         // Toggle menu for mobile

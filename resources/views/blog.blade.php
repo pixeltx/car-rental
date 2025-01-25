@@ -1,5 +1,5 @@
 <x-app>
-  <div class="mx-8 sm:mx-6 lg:mx-16 mt-6 md:mt-12 lg:mt-16">
+  <div class="mx-8 sm:mx-6 lg:mx-16 lg:mt-16 mt-[72px] md:mt-[80px]">
       <div class="flex flex-rows gap-10">
           <!-- Section Kiri -->
           <div class="w-full lg:w-3/5 space-y-14 mb-10">

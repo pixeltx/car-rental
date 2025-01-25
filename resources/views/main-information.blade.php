@@ -1,5 +1,5 @@
 <x-app>
-    <div class="pt-6 pb-12 md:space-y-10 z-10">
+    <div class="pt-6 pb-12 md:space-y-10 z-10 mt-[72px] md:mt-[80px]">
         <!-- Pusat Informasi Section -->
         <div class="text-center space-y-6 px-6 md:px-20 lg:px-32 py-8 ">
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] md:drop-shadow-lg">

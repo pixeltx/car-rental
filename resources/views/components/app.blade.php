@@ -18,13 +18,15 @@
         rel="stylesheet">
         <!--link swiperjs css-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">   
+
+    
     
 
     
 </head>
 
 
-<body class="">
+<body class="font-[Poppins]">
     
     <x-navbar />
 
@@ -39,11 +41,11 @@
     <!--link poppins icons-->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
-
     
+
     <script>
         const ruteContainer = document.getElementById('ruteContainer');
-
+    
         function showRuteKhusus() {
             ruteContainer.style.opacity = '0'; // Mulai dengan opacity 0
             setTimeout(() => {
@@ -77,7 +79,7 @@
             }, 300); // Delay sebelum mengganti konten
             setActiveButton('ruteKhusus', 'ruteInternational');
         }
-
+    
         function showRuteInternational() {
             ruteContainer.style.opacity = '0';
             setTimeout(() => {
@@ -114,15 +116,21 @@
             }, 300);
             setActiveButton('ruteInternational', 'ruteKhusus');
         }
-
+    
         function setActiveButton(activeId, inactiveId) {
             document.getElementById(activeId).classList.remove('text-newGreen', 'bg-[#fbf7eb]');
             document.getElementById(activeId).classList.add('text-[#fbf7eb]', 'bg-newGold');
-
+    
             document.getElementById(inactiveId).classList.remove('text-[#fbf7eb]', 'bg-newGold');
             document.getElementById(inactiveId).classList.add('text-newGreen', 'bg-[#fbf7eb]');
         }
+    
+        // Memanggil fungsi untuk menampilkan Rute Khusus saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            showRuteKhusus();
+        });
     </script>
+    
 </body>
 
 
