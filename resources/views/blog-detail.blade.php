@@ -1,8 +1,8 @@
-<x-app>
+<x-app :settings="$settings">
     <div class="mx-8 sm:mx-6 lg:mx-16  mb-10 mt-[100px] md:mt-[120px]">
         <div>
             <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
-                HEADLINE BERITA
+                {{ $blog->title }}
             </div>
             <div class="text-center text-sm sm:text-lg md:text-xl mb-4 md:mb-8">
                 SUB HEADLINE
@@ -11,9 +11,9 @@
         
         <div class="text-justify">
             <div class="lg:mx-28 space-y-6">
-                <img src="{{ asset('img/armada-bgt-slider-1.jpg') }}" alt="Car and scenery" class="w-full sm:h-96 object-cover">
+                <img src="{{ asset('storage/' . $blog->image) }}" alt="Car and scenery" class="w-full sm:h-96 object-cover">
                 <div class="text-end ">
-                    <p>25 Januari, 2025</p>
+                    <p>{{ $blog->created_at->format('d F, Y') }}</p>
                 </div>
             </div>
         
@@ -25,11 +25,9 @@
                 <div class="space-y-12">
                     <!-- Article 1 -->
                     <div class=" p-6">
-                        <h3 class="text-xl font-semibold text-gray-800">Discover  at Your Own Convenience</h3>
-                        <p class="mt-4 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolores quae sit libero maiores. Voluptate repellat explicabo praesentium accusantium beatae vel minus, omnis similique quod odio, magni, tempore eveniet laboriosam.Explore 's hidden gems at your pace with a rental car. With a car, you gain the freedom to visit beaches, cultural landmarks, and other attractions that might be off the beaten path.</p>
+                        <h3 class="text-xl font-semibold text-gray-800">{{ $blog->title }}</h3>
+                        <p class="mt-4 text-gray-600">{{ $blog->content }}</p>
                     </div>
-
-                    
         
                     <!-- Article 2 -->
                     <div class=" p-6">

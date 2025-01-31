@@ -15,7 +15,7 @@ class CarController extends Controller
 
     public function show($id)
     {
-        $car = Car::findOrFail($id);
+        $car = Car::with('facilities')->findOrFail($id);
         
         if (!$car) {
             return redirect()->route('index')->with('error', 'Car not found.');

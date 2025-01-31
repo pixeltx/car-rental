@@ -53,6 +53,11 @@ class Car extends Model
         return $this->belongsTo(CarModel::class);
     }
 
+    public function facilities()
+    {
+        return $this->hasMany(CarFacility::class);
+    }
+
     // Accessor to get the image URL
     public function getImageUrlAttribute()
     {

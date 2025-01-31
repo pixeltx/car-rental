@@ -1,4 +1,4 @@
-<x-app>
+<x-app :settings="$settings">
     <div class="mt-[72px] md:mt-[80px]">
         <div class="bg-cover" style="background-image: url('{{ asset('img/bg-rent.png') }}')">
             <div class="flex flex-col justify-center items-center text-center space-y-4 md:space-y-8 px-4 md:px-16 lg:px-32 py-8 mb-5 md:mb-10">

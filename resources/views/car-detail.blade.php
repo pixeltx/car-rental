@@ -1,4 +1,4 @@
-<x-app>
+<x-app :settings="$settings">
     <div class="mx-4 sm:mx-6 lg:mx-16 mb-16 mt-[100px] md:mt-[120px]">
         <div class="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-6 gap-6">
             <!-- Section 1 -->
@@ -55,6 +55,13 @@
                 <div class="swiper">
                     <div class="wrapper overflow-hidden mx-10">
                         <div class="swiper-wrapper">
+                            @foreach ($car->facilities as $facility)
+                                @foreach ($facility->images as $image)
+                                    <div class="swiper-slide">
+                                        <img src="{{ asset('storage/' . $image->image) }}" alt="Car image" class="w-full shadow-md">
+                                    </div>
+                                @endforeach       
+                            @endforeach
                             <div class="swiper-slide">
                                 <img src="{{ asset('img/dummyImage.jpg') }}" alt="Car image" class="w-full shadow-md">
                             </div>

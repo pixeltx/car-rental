@@ -1,4 +1,4 @@
-<x-app>
+<x-app :settings="$settings">
   <div class="mx-8 sm:mx-6 lg:mx-16 lg:mt-16 mt-[72px] md:mt-[80px]">
       <div class="flex flex-rows gap-10">
           <!-- Section Kiri -->

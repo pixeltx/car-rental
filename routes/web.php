@@ -7,6 +7,7 @@ use App\Http\Controllers\rentController;
 use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\MainInformationController;
 
 // Route::get('/', function () {
 //     return view('index');
@@ -36,17 +37,12 @@ Route::get('/aboutus', function () {
 
 Route::get('/testimoni', [TestimonyController::class, 'index'])->name('testimoni');
 
-Route::get('/information', function () {
-    return view('main-information');
-})->name('information');
+Route::get('/information', [MainInformationController::class, 'index'])->name('information');
 
 // Route::get('/car-detail', function () {return view('car-detail');})->name('car-detail');
 Route::get('/car-detail/{id}', [CarController::class, 'show'])->name('car-detail');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
-
-Route::get('/blog-detail', function () {
-    return view('blog-detail');
-})->name('blog-detail');
+Route::get('/blog-detail/{id}', [BlogController::class, 'show'])->name('blog-detail');
 
 require __DIR__.'/auth.php';

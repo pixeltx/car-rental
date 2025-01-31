@@ -27,12 +27,13 @@
 
 
 <body class="font-[Poppins]">
+    @stack('settings')
     
-    <x-navbar />
+    <x-navbar :settings="$settings"/>
 
     {{ $slot }}
 
-    <x-footer />
+    <x-footer :settings="$settings"/>
 
     <!--link swiperjs js-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

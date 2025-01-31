@@ -1,3 +1,5 @@
+@props(['settings'])
+
 <footer class="bg-black text-white py-10">
     <div class="max-w-screen-xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -24,8 +26,8 @@
             <div>
                 <h2 class="text-sm font-semibold uppercase mb-4">Hubungi Kami</h2>
                 <p class="text-sm text-gray-400">Jl. Mekarwangi No.79, Sariwangi, Kec. Parongpong, Kabupaten Bandung Barat, Jawa Barat 40559</p>
-                <p class="text-sm text-gray-400">Telepon: <a href="tel:+628123456789" class="hover:underline">+62 812 3456 789</a></p>
-                <p class="text-sm text-gray-400">Email: <a href="mailto:info@brightglobaltrans.com" class="hover:underline">info@brightglobaltrans.com</a></p>
+                <p class="text-sm text-gray-400">Telepon: <a href="tel:{{ $settings['phone_number'] }}" class="hover:underline">{{ $settings['phone_number'] }}</a></p>
+                <p class="text-sm text-gray-400">Email: <a href="mailto:{{ $settings['email_address'] }}" class="hover:underline">{{ $settings['email_address'] }}</a></p>
             </div>
         </div>
 

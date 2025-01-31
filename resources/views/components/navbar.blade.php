@@ -1,3 +1,5 @@
+@props(['settings'])
+
 <div>
     <div class="">
         <!-- Navbar -->
@@ -49,7 +51,7 @@
 
                 <!-- Kontak Button & Hamburger Icon -->
                 <div class="flex items-center gap-2 lg:gap-6">
-                    <a href="https://wa.me/+6281214955293" class="bg-newGold text-putih border-2 border-newGold hover:bg-transparent hover:text-newGold px-5 py-2 rounded-full transition duration-300">
+                    <a href="https://wa.me/{{ $settings['phone_number'] }}" class="bg-newGold text-putih border-2 border-newGold hover:bg-transparent hover:text-newGold px-5 py-2 rounded-full transition duration-300">
                         Kontak
                     </a>
                     <ion-icon name="menu" class="text-3xl cursor-pointer lg:hidden text-baseBackground" onclick="toggleMenu()"></ion-icon>

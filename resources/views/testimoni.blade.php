@@ -1,4 +1,4 @@
-<x-app>
+<x-app :settings="$settings">
     <div class="z-10 mt-[72px] md:mt-[80px]">
         <div class="">
             <div class="flex flex-col justify-center items-center text-center space-y-4 px-4 md:px-16 lg:px-32 py-8 my-5 md:my-10">

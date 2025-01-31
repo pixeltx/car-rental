@@ -2,35 +2,38 @@
 
 namespace App\Filament\Resources;
 
+use App\Models\Faq;
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\CarModel;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Resources\CarModelResource\Pages;
+use App\Filament\Resources\FaqResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\CarModelResource\RelationManagers;
+use App\Filament\Resources\FaqResource\RelationManagers;
 
-class CarModelResource extends Resource
+class FaqResource extends Resource
 {
-    protected static ?string $model = CarModel::class;
+    protected static ?string $model = Faq::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-question-mark-circle';
 
-    protected static ?string $navigationGroup = 'Kendaraan';
+    protected static ?string $navigationGroup = 'Settings';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                TextInput::make('model_name')
-                    ->label('Model Name')
-                    ->required()
-                    ->unique(CarModel::class, 'model_name'),
+                TextInput::make('question')
+                    ->label('Question')
+                    ->required(),
+                Textarea::make('answer')
+                    ->label('Answer')
+                    ->required(),
             ]);
     }
 
@@ -38,8 +41,8 @@ class CarModelResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('model_name')
-                    ->label('Model Name')
+                TextColumn::make('question')
+                    ->label('Question')
                     ->searchable()
                     ->sortable(),
             ])
@@ -66,9 +69,9 @@ class CarModelResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCarModels::route('/'),
-            'create' => Pages\CreateCarModel::route('/create'),
-            'edit' => Pages\EditCarModel::route('/{record}/edit'),
+            'index' => Pages\ListFaqs::route('/'),
+            'create' => Pages\CreateFaq::route('/create'),
+            'edit' => Pages\EditFaq::route('/{record}/edit'),
         ];
     }
 }

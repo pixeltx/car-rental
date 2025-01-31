@@ -1,4 +1,4 @@
-<x-app title="Beranda">
+<x-app :settings="$settings" title="Beranda">
     
     <div class="overflow-hidden mt-[72px] md:mt-[80px]">
         <div class="mb-20 ">
@@ -30,7 +30,7 @@
                             <a href="{{ route('rent') }}" class="text-sm md:text-lg border-2 border-newGold py-2 px-6 md:px-8 text-newGold hover:text-white hover:bg-newGreen hover:border-newGreen transition duration-300">
                                 ORDER NOW
                             </a>
-                            <a href="https://wa.me/+6281214955293" class="text-sm md:text-lg border-2 border-newGold py-2 px-6 md:px-8 text-newGold hover:text-white hover:bg-newGreen hover:border-newGreen transition duration-300">
+                            <a href="https://wa.me/{{ $settings['phone_number'] }}" class="text-sm md:text-lg border-2 border-newGold py-2 px-6 md:px-8 text-newGold hover:text-white hover:bg-newGreen hover:border-newGreen transition duration-300">
                                 CONTACT
                             </a>
                         </div>
@@ -138,7 +138,7 @@
                         </ul>
                     </div>
                     <div class="flex justify-center pt-16">
-                        <a href="https://wa.me/+6281214955293" class="flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-putih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
+                        <a href="https://wa.me/{{ $settings['phone_number'] }}" class="flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-putih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
                     </div>
                 </div>
         
@@ -162,7 +162,7 @@
                             </ul>
                         </div>
                         <div class="flex justify-center pt-4">
-                            <a href="https://wa.me/+6281214955293" class=" flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-putih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
+                            <a href="https://wa.me/{{ $settings['phone_number'] }}" class=" flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-putih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
                         </div>
                     </div>
                 </div>
@@ -183,7 +183,7 @@
                         </ul>
                     </div>
                     <div class="flex justify-center pt-16">
-                        <a href="https://wa.me/+6281214955293" class=" flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-putih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
+                        <a href="https://wa.me/{{ $settings['phone_number'] }}" class=" flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-putih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
                     </div>
                 </div>
             </div>
@@ -225,7 +225,7 @@
                         <div class="bg-newGreen w-full h-0.5 "></div>
                     </div>
                     <div class="p-5 flex justify-center items-center">
-                        <a href="https://wa.me/+6281214955293" class="flex justify-center items-center text-[#fbf7eb] bg-newGold w-full h-14 rounded-xl text-lg  md:text-xl font-bold border-2 border-newGold hover:bg-[#f6f1eb] hover:text-newGold  transition duration-300">Hubungi Kami</a>
+                        <a href="https://wa.me/{{ $settings['phone_number'] }}" class="flex justify-center items-center text-[#fbf7eb] bg-newGold w-full h-14 rounded-xl text-lg  md:text-xl font-bold border-2 border-newGold hover:bg-[#f6f1eb] hover:text-newGold  transition duration-300">Hubungi Kami</a>
                     </div>
                 </div>
             </div>
@@ -309,11 +309,6 @@
                     @foreach ($galleries as $gallery)    
                     <div><img src="{{ asset('storage/' . $gallery->image) }}" alt="" class="w-full md:w-[27rem] md:h-[19rem] object-cover transition-transform transform hover:scale-105 hover:shadow-lg"></div>
                     @endforeach
-                    <div><img src="{{ asset('img/dummyImage.jpg') }}" alt="" class="w-full md:w-[27rem] md:h-[19rem] object-cover transition-transform transform hover:scale-105 hover:shadow-lg"></div>
-                    <div><img src="{{ asset('img/dummyImage.jpg') }}" alt="" class="w-full md:w-[27rem] md:h-[19rem] object-cover transition-transform transform hover:scale-105 hover:shadow-lg"></div>
-                    <div><img src="{{ asset('img/dummyImage.jpg') }}" alt="" class="w-full md:w-[27rem] md:h-[19rem] object-cover transition-transform transform hover:scale-105 hover:shadow-lg"></div>
-                    <div><img src="{{ asset('img/dummyImage.jpg') }}" alt="" class="w-full md:w-[27rem] md:h-[19rem] object-cover transition-transform transform hover:scale-105 hover:shadow-lg"></div>
-                    <div><img src="{{ asset('img/dummyImage.jpg') }}" alt="" class="w-full md:w-[27rem] md:h-[19rem] object-cover transition-transform transform hover:scale-105 hover:shadow-lg"></div>
                 </div>
             </div>
         </div>
@@ -326,51 +321,22 @@
             </div>
             <div class="flex flex-col justify-center items-center md:flex-row gap-8">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    @foreach ($blogs as $blog)    
                     <!-- Card 1 -->
                     <div class="bg-white overflow-hidden">
                         <div class="relative">
-                            <img src="{{ asset('img/armada-bgt-slider-1.jpg') }}" alt="Blog Image 1" class="w-full h-52 object-cover">
+                            <img src="{{ asset('storage/' . $blog->image) }}" alt="Blog Image 1" class="w-full h-52 object-cover">
                         </div>
                         <div class="pt-4">
-                            <h3 class="text-lg font-bold text-gray-800">UNDERSTANDING THE DRIVING ROLE IN</h3>
-                            <div class="text-sm text-gray-500 mt-2">Published on: Jan 25, 2025</div> <!-- Tanggal ditambahkan di sini -->
-                            <a href="{{ route('blog-detail') }}" class="flex items-center text-newGold hover:text-newGreen font-semibold mt-4 transition duration-300">
+                            <h3 class="text-lg font-bold text-gray-800">{{ $blog->content }}</h3>
+                            <div class="text-sm text-gray-500 mt-2">Published on: {{ $blog->created_at->format('d F, Y') }}</div> <!-- Tanggal ditambahkan di sini -->
+                            <a href="{{ route('blog-detail', ['id' => $blog->id]) }}" class="flex items-center text-newGold hover:text-newGreen font-semibold mt-4 transition duration-300">
                                 READ MORE
                                 <span class="ml-2 text-xl">&rarr;</span>
                             </a>
                         </div>
                     </div>
-                    
-                    <!-- Card 2 -->
-                    <div class="bg-white overflow-hidden">
-                        <div class="relative">
-                            <img src="{{ asset('img/armada-bgt-slider-1.jpg') }}" alt="Blog Image 2" class="w-full h-52 object-cover">
-                        </div>
-                        <div class="pt-4">
-                            <h3 class="text-lg font-bold text-gray-800">TIPS RENT CAR </h3>
-                            <div class="text-sm text-gray-500 mt-2">Published on: Jan 24, 2025</div> <!-- Tanggal ditambahkan di sini -->
-                            <a href="{{ route('blog-detail') }}" class="flex items-center text-newGold hover:text-newGreen font-semibold mt-4 transition duration-300">
-                                READ MORE
-                                <span class="ml-2 text-xl">&rarr;</span>
-                            </a>
-                        </div>
-                    </div>
-                
-                    <!-- Card 3 -->
-                    <div class="bg-white overflow-hidden">
-                        <div class="relative">
-                            <img src="{{ asset('img/armada-bgt-slider-3.jpg') }}" alt="Blog Image 3" class="w-full h-52 object-cover">
-                        </div>
-                        <div class="pt-4">
-                            <h3 class="text-lg font-bold text-gray-800">RENT A CAR AIRPORT</h3>
-                            <div class="text-sm text-gray-500 mt-2">Published on: Jan 23, 2025</div> <!-- Tanggal ditambahkan di sini -->
-                            <a href="{{ route('blog-detail') }}" class="flex items-center text-newGold hover:text-newGreen font-semibold mt-4 transition duration-300">
-                                READ MORE
-                                <span class="ml-2 text-xl">&rarr;</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    @endforeach
                 
             </div>
         </div>
@@ -386,24 +352,24 @@
                 <div class="w-full lg:w-1/2 space-y-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <!-- Kontak Item dengan Hover -->
-                        <a href="https://wa.me/+6281214955293" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="https://wa.me/{{ $settings['phone_number'] }}" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/wa-hubungi-kami.svg') }}" alt="WhatsApp" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">0812-1495-5293</span>
+                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">{{ $settings['phone_number'] }}</span>
                         </a>
                     
                         <div class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/email-hubungi-kami.svg') }}" alt="Email" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">Global@trans.com</span>
+                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">{{ $settings['email_address'] }}</span>
                         </div>
                     
                         <div class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/ig-hubungi-kami.svg') }}" alt="Instagram" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">@globalTrans</span>
+                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">{{ $settings['instagram_link'] ?? 'N/A' }}</span>
                         </div>
                     
                         <div class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/fb-hubungi-kami.svg') }}" alt="Facebook" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">Brightglobaltrans</span>
+                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">{{ $settings['facebook_link'] ?? 'N/A' }}</span>
                         </div>
                     </div>
                     

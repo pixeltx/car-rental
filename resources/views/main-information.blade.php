@@ -1,4 +1,4 @@
-<x-app>
+<x-app :settings="$settings">
     <div class="pt-6 pb-12 md:space-y-10 z-10 mt-[72px] md:mt-[80px]">
         <!-- Pusat Informasi Section -->
         <div class="text-center space-y-6 px-6 md:px-20 lg:px-32 py-8 ">
@@ -51,6 +51,7 @@
         <div class="flex flex-col md:flex-row gap-8">
             <div class="w-full md:1/2">
                 <div class="flex flex-col justify-start space-y-5">
+                    @foreach ($faqs as $faq)
                     <div class="relative w-[100%] md:w-full bg-newGold  shadow-[6px_6px_10px_-1px_rgba(0,0,0,0.15),-6px_-6px_10px_-1px_rgba(255,255,255,0.8)]">
                         <input type="checkbox" id="faq" class="absolute peer opacity-0">
                         <label for="faq" class="absolute top-4 right-4 rotate-0 peer-checked:rotate-180 duration-500 cursor-pointer">
@@ -59,14 +60,15 @@
                             </svg>
                         </label>
                         <label class="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center cursor-pointer" for="faq">
-                            Lorem ipsum dolor sit amet?
+                            {{ $faq->question }}
                         </label>
                         <div class="max-h-0 overflow-hidden peer-checked:max-h-[200px] text-customGreen bg-white transition-[max-height] duration-500 ease-in-out">
                             <p class="p-[20px] text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum nostrum inventore natus modi iure. Ipsum quod velit in necessitatibus vel nesciunt, rerum eius vero tenetur iste illum magnam unde.
+                                {{ $faq->answer }}
                             </p>
                         </div>
                     </div>
+                    @endforeach
                     <div class="relative w-[100%] md:w-full bg-newGold  shadow-[6px_6px_10px_-1px_rgba(0,0,0,0.15),-6px_-6px_10px_-1px_rgba(255,255,255,0.8)]">
                         <input type="checkbox" id="faq2" class="absolute peer opacity-0">
                         <label for="faq2" class="absolute top-4 right-4 rotate-0 peer-checked:rotate-180 duration-500 cursor-pointer">

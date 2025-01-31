@@ -26,6 +26,8 @@ class CarResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-truck';
 
+    protected static ?string $navigationGroup = 'Kendaraan';
+
     public static function getLabel(): string
     {
         return 'Kendaraan';
