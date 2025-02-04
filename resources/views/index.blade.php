@@ -356,17 +356,17 @@
                             <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">{{ $settings['phone_number'] }}</span>
                         </a>
                     
-                        <a href="" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="mailto:{{ $settings['email_address'] }}" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/email-hubungi-kami.svg') }}" alt="Email" class="w-8 md:w-10 flex-shrink-0">
                             <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">Global@trans.com</span>
                         </a>
                     
-                        <a href="https://www.instagram.com/bright_global_trans/" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="{{ $settings['instagram_link'] }}" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/ig-hubungi-kami.svg') }}" alt="Instagram" class="w-8 md:w-10 flex-shrink-0">
                             <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">bright_global_trans</span>
                         </a>
                     
-                        <a href="" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="{{ $settings['facebook_link'] }}" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/fb-hubungi-kami.svg') }}" alt="Facebook" class="w-8 md:w-10 flex-shrink-0">
                             <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">GlobalTrans</span>
                         </a>
