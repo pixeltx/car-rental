@@ -19,11 +19,11 @@
                     </div>
                 
                     <!-- Text Content -->
-                    <div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-6 md:px-16 text-center text-white">
-                        <h1 class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] drop-shadow-lg">
+                    <div class="fade-animation absolute inset-0 z-20 flex flex-col items-center justify-center px-6 md:px-16 text-center text-white">
+                        <h1 class="font-[Poppins] text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] drop-shadow-lg">
                             BrightGlobaltrans
                         </h1>
-                        <p class="font-[open-sans] mt-4 text-sm md:text-lg lg:text-xl text-gray-100 font-medium drop-shadow-lg py-2 md:py-4">
+                        <p class=" mt-4 text-sm md:text-lg lg:text-xl text-gray-100 font-medium drop-shadow-lg py-2 md:py-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum deserunt dolores hic voluptatum voluptates illo neque ad, fuga quidem quibusdam excepturi sunt officia sed commodi ipsam quos facere corporis praesentium.
                         </p>
                         <div class="font-[poppins] flex flex-col md:flex-row gap-4 mt-6">
@@ -56,8 +56,7 @@
             </div>
         </div>
         
-        
-        <div class="px-8 md:px-28 font-[open-sans] ">
+        <div class="px-8 md:px-28">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
                 <!-- Card 1 -->
                 <div id="animate" class="transition-transform transform hover:scale-105 hover:shadow-lg p-6 bg-white rounded-lg flex flex-col items-center">
@@ -115,7 +114,7 @@
         
         
         <div class="mt-10 md:mt-16 lg:mt-20">
-            <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-newGold mb-2">
+            <div class="font-[Poppins] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-newGold mb-2">
                 Layanan Kami
             </div>
             <div class="text-center text-sm md:text-xl mb-4 md:mb-8">
@@ -123,7 +122,7 @@
             </div>
             <div class="px-8 py-10 flex flex-wrap justify-center gap-5">
                 <!-- REGULER Section -->
-                <div class="bg-newGreen px-5 py-4 rounded-xl text-[#fbf7eb] w-full sm:w-80 md:w-96 lg:w-[23rem]">
+                <div class= "opacity-0 transform translate-y-10 transition-all duration-1000 fade-animation bg-newGreen px-5 py-4 rounded-xl text-[#fbf7eb] w-full sm:w-80 md:w-96 lg:w-[23rem]">
                     <div class="text-center text-[#fbf7eb] font-semibold text-2xl">REGULER</div>
                     <div>
                         <img src="{{ asset('img/dummyImage.jpg') }}" class="rounded-lg pt-3 pb-10 w-full">
@@ -143,11 +142,11 @@
                 </div>
         
                 <!-- Most Picked Section -->
-                <div class="bg-newGold rounded-xl p-2 w-full sm:w-80 md:w-96 lg:w-[23rem]">
+                <div class="opacity-0 transform translate-y-10 transition-all duration-1000 fade-animation bg-newGold rounded-xl p-2 w-full sm:w-80 md:w-96 lg:w-[23rem]">
                     <div class="text-center text-[#fbf7eb] font-semibold text-xl pb-2 w-full">
                         Most Picked
                     </div>
-                    <div class="bg-newGreen px-5 py-4 rounded-xl text-[#fbf7eb] w-full">
+                    <div class=" bg-newGreen px-5 py-4 rounded-xl text-[#fbf7eb] w-full">
                         <div class="text-center text-[#fbf7eb] font-semibold text-2xl">CHARTER</div>
                         <div>
                             <img src="{{ asset('img/dummyImage.jpg') }}" class="rounded-lg pt-3 pb-10 w-full">
@@ -168,7 +167,7 @@
                 </div>
         
                 <!-- INTERNATIONAL Section -->
-                <div class="bg-newGreen px-5 py-4 rounded-xl text-[#fbf7eb] w-full sm:w-80 md:w-96 lg:w-[23rem]">
+                <div class="opacity-0 transform translate-y-10 transition-all duration-1000 fade-animation bg-newGreen px-5 py-4 rounded-xl text-[#fbf7eb] w-full sm:w-80 md:w-96 lg:w-[23rem]">
                     <div class="text-center text-[#fbf7eb] font-semibold text-2xl">INTERNATIONAL</div>
                     <div>
                         <img src="{{ asset('img/dummyImage.jpg') }}" class="rounded-lg pt-3 pb-10 w-full">
@@ -189,7 +188,7 @@
             </div>
         </div>
         <div class="bg-cover mt-10 md:mt-16 lg:mt-20" style="background-image: url('{{ asset('img/bg-rent.png') }}')">
-            <div class="px-8 md:px-28 lg:px-28 py-5">
+            <div class="opacity-0 transform translate-y-10 transition-all duration-1000 fade-animation px-8 md:px-28 lg:px-28 py-5">
                 <div class="text-2xl md:text-3xl lg:text-5xl font-bold text-[#ffd700] mb-2">
                     Rute Kami
                 </div>
@@ -233,7 +232,7 @@
         <div class="mt-10 md:mt-16 lg:mt-20">
             <div>
                 <div>
-                    <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
+                    <div class="font-[Poppins] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
                         Paling Populer
                     </div>
                     <div class="text-center text-sm md:text-xl mb-4 md:mb-8">
@@ -241,7 +240,7 @@
                     </div>
                     <div class="mx-10 md:mx-16">
                         @foreach ($cars as $car)
-                        <div class="bg-newGreen flex flex-col md:flex-col lg:flex-row p-8 md:p-6 gap-6 rounded-xl mb-6 shadow-lg">
+                        <div class="bg-newGreen flex flex-col md:flex-col lg:flex-row p-8 md:p-6 gap-6 rounded-xl mb-6 shadow-lg ">
                             {{-- Gambar mobil --}}
                             <div class="w-full md:w-full lg:w-4/12">
                                 <img src="{{ asset('storage/' . $car->image) }}" alt="{{ $car->car_name }}" class="rounded-xl">
@@ -250,7 +249,7 @@
                             {{-- Deskripsi singkat --}}
                             <div class="w-full md:w-full lg:w-8/12 flex flex-col justify-between">
                                 <div>
-                                    <h2 class="font-[Raleway] text-2xl font-bold">{{ $car->car_name }}</h2>
+                                    <h2 class="font-[Poppins] text-2xl font-bold">{{ $car->car_name }}</h2>
                                     <div class="grid grid-cols-2 md:flex gap-4 my-6 md:my-2 text-sm">
                                         <div class="flex items-center gap-2">
                                             <svg class="w-4 h-4 fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M135.2 117.4L109.1 192H402.9l-26.1-74.6C372.3 104.6 360.2 96 346.6 96H165.4c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32H346.6c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2V400v48c0 17.7-14.3 32-32 32H448c-17.7 0-32-14.3-32-32V400H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V400 256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"></path></svg>
@@ -298,7 +297,7 @@
         </div>
         
         <div class=" mt-10 md:mt-16 lg:mt-20 mx-6 md:mx-12 lg:mx-16">
-            <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
+            <div class="font-[Poppins] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
                 Galeri
             </div>
             <div class="text-center text-sm md:text-xl mb-4 md:mb-8">
@@ -313,11 +312,11 @@
             </div>
         </div>
         <div class="mt-10 md:mt-16 lg:mt-20 mx-6 md:mx-12 lg:mx-16 my-8">
-            <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
+            <div class="font-[Poppins] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
                 Blog dan Artikel Kami
             </div>
             <div class="text-center text-sm md:text-xl mb-4 md:mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam 
+                Blog dan Artikel teratas kami 
             </div>
             <div class="flex flex-col justify-center items-center md:flex-row gap-8">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -341,7 +340,7 @@
             </div>
         </div>
         <div class="mt-10 md:mt-16 lg:mt-20 mx-6 md:mx-12 lg:mx-16 my-8">
-            <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
+            <div class="font-[Poppins] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
                 Hubungi Kami
             </div>
             <div class="text-center text-sm md:text-xl mb-4 md:mb-8">
@@ -354,23 +353,23 @@
                         <!-- Kontak Item dengan Hover -->
                         <a href="https://wa.me/{{ $settings['phone_number'] }}" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/wa-hubungi-kami.svg') }}" alt="WhatsApp" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">{{ $settings['phone_number'] }}</span>
+                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">{{ $settings['phone_number'] }}</span>
                         </a>
                     
-                        <div class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/email-hubungi-kami.svg') }}" alt="Email" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">{{ $settings['email_address'] }}</span>
-                        </div>
+                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">Global@trans.com</span>
+                        </a>
                     
-                        <div class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="https://www.instagram.com/bright_global_trans/" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/ig-hubungi-kami.svg') }}" alt="Instagram" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">{{ $settings['instagram_link'] ?? 'N/A' }}</span>
-                        </div>
+                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">bright_global_trans</span>
+                        </a>
                     
-                        <div class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/fb-hubungi-kami.svg') }}" alt="Facebook" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">{{ $settings['facebook_link'] ?? 'N/A' }}</span>
-                        </div>
+                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">GlobalTrans</span>
+                        </a>
                     </div>
                     
                 </div>

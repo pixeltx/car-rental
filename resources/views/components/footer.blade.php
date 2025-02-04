@@ -1,6 +1,6 @@
 @props(['settings'])
 
-<footer class="bg-black text-white py-10">
+<footer class="bg-black text-white py-10 font-[inter]">
     <div class="max-w-screen-xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Logo dan Tentang -->
@@ -38,7 +38,7 @@
         <div class="flex flex-col md:flex-row md:justify-between items-center text-sm">
             <div class="flex space-x-4">
                 <a href="#" class="hover:text-gray-300">Facebook</a>
-                <a href="#" class="hover:text-gray-300">Instagram</a>
+                <a href="https://www.instagram.com/bright_global_trans/" class="hover:text-gray-300">Instagram</a>
                 <a href="#" class="hover:text-gray-300">Twitter</a>
             </div>
             <p class="mt-4 md:mt-0 text-gray-400">© 2025 Brightglobaltrans. All rights reserved.</p>

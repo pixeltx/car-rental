@@ -1,8 +1,8 @@
 <x-app :settings="$settings">
     <div class="mt-[72px] md:mt-[80px]">
         <div class="bg-cover" style="background-image: url('{{ asset('img/bg-rent.png') }}')">
-            <div class="flex flex-col justify-center items-center text-center space-y-4 md:space-y-8 px-4 md:px-16 lg:px-32 py-8 mb-5 md:mb-10">
-                <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] md:drop-shadow-lg">
+            <div class="fade-animation flex flex-col justify-center items-center text-center space-y-4 md:space-y-8 px-4 md:px-16 lg:px-32 py-8 mb-5 md:mb-10">
+                <div class="font-[Poppins] text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] md:drop-shadow-lg">
                     BrightGlobaltrans
                 </div>
                 <div class="text-sm md:text-lg lg:text-xl text-[#fbf7eb] font-semibold leading-relaxed">
@@ -22,7 +22,7 @@
             <div class="flex flex-col lg:flex-row bg-newGreen p-6 sm:p-8 lg:p-10 rounded-xl gap-6 lg:gap-12">
                 <!-- Section Kiri -->
                 <div class="w-full lg:w-1/2 space-y-6">
-                    <div class="font-[Raleway] text-[#ffd700] font-semibold text-lg sm:text-xl lg:text-2xl">Tentang Kami</div>
+                    <div class="font-[Poppins] text-[#ffd700] font-semibold text-lg sm:text-xl lg:text-2xl">Tentang Kami</div>
                     <div class="text-white font-bold text-2xl sm:text-3xl lg:text-4xl leading-snug">
                         Travel Door to Door: Perjalanan Nyaman & Aman
                     </div>
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="mx-6 md:mx-12 lg:mx-16 my-8">
-            <div class="font-[Raleway] text-2xl sm:text-3xl lg:text-5xl font-bold text-center text-[#ffd700] mb-6 lg:mb-10">
+            <div class="font-[Poppins] text-2xl sm:text-3xl lg:text-5xl font-bold text-center text-[#ffd700] mb-6 lg:mb-10">
                 Team Support
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -105,7 +105,7 @@
             </div>
         </div>
         <div class="mt-10 md:mt-16 lg:mt-20 mx-6 md:mx-12 lg:mx-16 my-8">
-            <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
+            <div class="font-[Poppins] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
                 Hubungi Kami
             </div>
             <div class="text-center text-sm md:text-xl mb-4 md:mb-8">
@@ -116,25 +116,25 @@
                 <div class="w-full lg:w-1/2 space-y-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <!-- Kontak Item dengan Hover -->
-                        <a href="https://wa.me/+6281214955293" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="https://wa.me/{{ $settings['phone_number'] }}" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/wa-hubungi-kami.svg') }}" alt="WhatsApp" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">0812-1495-5293</span>
+                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">{{ $settings['phone_number'] }}</span>
                         </a>
                     
-                        <div class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/email-hubungi-kami.svg') }}" alt="Email" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">Global@trans.com</span>
-                        </div>
+                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">Global@trans.com</span>
+                        </a>
                     
-                        <div class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="https://www.instagram.com/bright_global_trans/" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/ig-hubungi-kami.svg') }}" alt="Instagram" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">@globalTrans</span>
-                        </div>
+                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">bright_global_trans</span>
+                        </a>
                     
-                        <div class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/fb-hubungi-kami.svg') }}" alt="Facebook" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">Brightglobaltrans</span>
-                        </div>
+                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">GlobalTrans</span>
+                        </a>
                     </div>
                     
                 </div>

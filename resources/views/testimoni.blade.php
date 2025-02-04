@@ -1,8 +1,8 @@
 <x-app :settings="$settings">
     <div class="z-10 mt-[72px] md:mt-[80px]">
         <div class="">
-            <div class="flex flex-col justify-center items-center text-center space-y-4 px-4 md:px-16 lg:px-32 py-8 my-5 md:my-10">
-                <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] md:drop-shadow-lg">
+            <div class="fade-animation flex flex-col justify-center items-center text-center space-y-4 px-4 md:px-16 lg:px-32 py-8 my-5 md:my-10">
+                <div class="font-[Poppins] text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] md:drop-shadow-lg">
                     TESTIMONI
                 </div>
                 <div class="text-sm md:text-lg lg:text-xl text-customGreen font-semibold leading-relaxed">

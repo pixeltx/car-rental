@@ -26,7 +26,7 @@
 </head>
 
 
-<body class="font-[open-sans] flex flex-col min-h-screen">
+<body class="font-[inter] flex flex-col min-h-screen">
     @stack('settings')
     
     <x-navbar :settings="$settings"/>
@@ -175,9 +175,55 @@
     counters.forEach(counter => observer.observe(counter));
 });
 
+    document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".fade-animation");
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate-fadeInUp");
+                    entry.target.classList.remove("opacity-0", "translate-y-10");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+    sections.forEach(section => observer.observe(section));
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".car-section");
+
+    function addAnimation(section) {
+        section.classList.remove("opacity-0", "scale-90", "animate-smoothPopUp");
+        setTimeout(() => {
+            section.classList.add("animate-smoothPopUp");
+        }, 200); 
+    }
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    addAnimation(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    // Ulang animasi saat kembali ke halaman
+    window.addEventListener("pageshow", () => {
+        sections.forEach((section) => addAnimation(section));
+    });
+});
+
+
     </script>
     
 </body>
-
 
 </html>

@@ -84,8 +84,8 @@
             </div>
 
             <!-- Section 4 -->
-            <div class="md:col-span-2 md:row-span-4 overflow-hidden">
-                <div class="shadow-lg rounded-lg">
+            <div class="md:col-span-2 md:row-span-4 overflow-hidden ">
+                <div class="shadow-lg rounded-lg ">
                     <div class="bg-newGreen uppercase text-center font-semibold text-2xl md:text-3xl py-4 md:py-6">
                         Description
                     </div>
@@ -104,7 +104,7 @@
                 </div>
             </div>
             <div class="flex md:flex-row flex-col justify-evenly space-y-10 md:space-y-0 gap-4">
-                <div class="w-full md:w-96">
+                <div class="w-full md:w-96 shadow-lg">
                     <div class="bg-newGreen text-center font-semibold text-2xl md:text-3xl py-4">
                         Include
                     </div>
@@ -121,7 +121,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="w-full md:w-96">
+                <div class="w-full md:w-96 shadow-lg">
                     <div class="bg-newGreen text-center font-semibold text-2xl md:text-3xl py-4">
                         Exclude
                     </div>
@@ -141,4 +141,5 @@
             </div>
         </div>
     </div>
+    @vite('resources/js/slide-car-detail.js')
 </x-app>
