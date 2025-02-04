@@ -43,6 +43,11 @@ class Car extends Model
         });
     }
 
+    public function images()
+    {
+        return $this->hasMany(FacilityImage::class);
+    }
+
     public function brand()
     {
         return $this->belongsTo(Brand::class);

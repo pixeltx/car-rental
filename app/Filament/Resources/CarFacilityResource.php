@@ -36,10 +36,10 @@ class CarFacilityResource extends Resource
                 TextInput::make('facility')
                     ->required()
                     ->maxLength(255),
-                TextInput::make('icon')
-                    // ->required()
-                    ->maxLength(255),
-                Textarea::make('description'),
+                // TextInput::make('icon')
+                //     ->required()
+                //     ->maxLength(255),
+                // Textarea::make('description'),
                 FileUpload::make('images')
                 ->label('Gambar')
                 ->multiple()
@@ -64,8 +64,8 @@ class CarFacilityResource extends Resource
             ->columns([
                 TextColumn::make('car.car_name')->label('Car'),
                 TextColumn::make('facility')->sortable()->searchable(),
-                TextColumn::make('icon')->sortable()->searchable(),
-                TextColumn::make('description')->sortable()->searchable(),
+                // TextColumn::make('icon')->sortable()->searchable(),
+                // TextColumn::make('description')->sortable()->searchable(),
             ])
             ->filters([
                 //

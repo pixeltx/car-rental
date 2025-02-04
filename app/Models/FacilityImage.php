@@ -20,6 +20,11 @@ class FacilityImage extends Model
         return $this->belongsTo(CarFacility::class);
     }
 
+    public function car()
+    {
+        return $this->belongsTo(Car::class);
+    }
+
     protected static function boot()
     {
         parent::boot();

@@ -60,7 +60,7 @@
                                     <div class="swiper-slide">
                                         <img src="{{ asset('storage/' . $image->image) }}" alt="Car image" class="w-full shadow-md">
                                     </div>
-                                @endforeach       
+                                @endforeach
                             @endforeach
                             <div class="swiper-slide">
                                 <img src="{{ asset('img/dummyImage.jpg') }}" alt="Car image" class="w-full shadow-md">

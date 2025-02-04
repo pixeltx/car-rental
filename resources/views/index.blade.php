@@ -328,7 +328,7 @@
                             <img src="{{ asset('storage/' . $blog->image) }}" alt="Blog Image 1" class="w-full h-52 object-cover">
                         </div>
                         <div class="pt-4">
-                            <h3 class="text-lg font-bold text-gray-800">{{ $blog->content }}</h3>
+                            <h3 class="text-lg font-bold text-gray-800">{{ $blog->title }}</h3>
                             <div class="text-sm text-gray-500 mt-2">Published on: {{ $blog->created_at->format('d F, Y') }}</div> <!-- Tanggal ditambahkan di sini -->
                             <a href="{{ route('blog-detail', ['id' => $blog->id]) }}" class="font-[poppins] flex items-center text-newGold hover:text-newGreen font-semibold mt-4 transition duration-300">
                                 READ MORE

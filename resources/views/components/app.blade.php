@@ -45,7 +45,9 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
     <script>
+    window.settings = @json($settings);
     const ruteContainer = document.getElementById("ruteContainer");
+    const phoneNumber = window.settings.phone_number || null;
 
         function showRuteKhusus() {
             ruteContainer.style.opacity = "0"; // Mulai dengan opacity 0
@@ -73,7 +75,7 @@
                                 <div class="bg-newGreen w-full h-0.5"></div>
                             </div>
                             <div class="p-5">
-                                <a href="https://wa.me/+6281214955293" class="font-[poppins] flex justify-center items-center text-[#fbf7eb] bg-newGold w-full h-14 rounded-xl text-lg md:text-xl font-bold border-2 border-newGold hover:bg-[#f6f1eb] hover:text-newGold trans transition duration-300">Hubungi Kami</a>
+                                <a href="https://wa.me/${phoneNumber}" class="font-[poppins] flex justify-center items-center text-[#fbf7eb] bg-newGold w-full h-14 rounded-xl text-lg md:text-xl font-bold border-2 border-newGold hover:bg-[#f6f1eb] hover:text-newGold trans transition duration-300">Hubungi Kami</a>
                             </div>
                         `;
                 ruteContainer.style.opacity = "1"; // Fade-in konten
@@ -110,7 +112,7 @@
                                 <div class="bg-newGreen w-full h-0.5"></div>
                             </div>
                             <div class="p-5">
-                                <a href="https://wa.me/+6281214955293" class="font-[poppins] flex justify-center items-center text-[#fbf7eb] bg-newGold w-full h-14 rounded-xl text-lg md:text-xl font-bold border-2 border-newGold hover:bg-[#f6f1eb] hover:text-newGold trans transition duration-300">Hubungi Kami</a>
+                                <a href="https://wa.me/${phoneNumber}" class="font-[poppins] flex justify-center items-center text-[#fbf7eb] bg-newGold w-full h-14 rounded-xl text-lg md:text-xl font-bold border-2 border-newGold hover:bg-[#f6f1eb] hover:text-newGold trans transition duration-300">Hubungi Kami</a>
                             </div>
                         `;
                 ruteContainer.style.opacity = "1";

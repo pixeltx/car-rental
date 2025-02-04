@@ -12,6 +12,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\BlogResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -30,9 +31,12 @@ class BlogResource extends Resource
                 TextInput::make('title')
                     ->label('Judul')
                     ->required(),
-                TextInput::make('content')
+                RichEditor::make('content')
                     ->label('Konten')
-                    ->required(),
+                    ->required()
+                    ->toolbarButtons([
+                        'bold', 'italic', 'underline', 'strike', 'link', 'blockquote', 'code-block'
+                    ]),
                 FileUpload::make('image')
                     ->label('Gambar')
                     ->image()
@@ -50,7 +54,7 @@ class BlogResource extends Resource
                     ->label('Judul')
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('content'),
+                // TextColumn::make('content'),
                 ImageColumn::make('image')
                     ->label('Gambar')
                     ->size(100, 100),
