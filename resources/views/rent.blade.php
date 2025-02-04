@@ -2,7 +2,7 @@
     <div class="z-0 mt-[72px] md:mt-[80px]">
         <div>
             <div class="flex flex-col justify-center items-center text-center space-y-4 px-4 md:px-16 lg:px-32 py-8 my-5 md:my-10">
-                <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] md:drop-shadow-lg">
+                <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] md:drop-shadow-lg">
                     ARMADA KAMI
                 </div>
                 <div class="text-sm md:text-lg lg:text-xl text-customGreen font-semibold leading-relaxed">
@@ -51,7 +51,7 @@
                                 {{-- Harga dan tombol selengkapnya --}}
                                 <div class="flex flex-col md:flex-row justify-between lg:mt-0 mt-8 space-y-4">
                                     <div class="mb-4 md:mb-0">
-                                        <a href="{{ route('car-detail', ['id' => $car->id]) }}" class="border-2 border-newGold bg-newGold text-black py-2 px-4 rounded-lg hover:bg-newGreen hover:text-newGold transition">
+                                        <a href="{{ route('car-detail', ['id' => $car->id]) }}" class="font-[poppins] border-2 border-newGold bg-newGold text-black py-2 px-4 rounded-lg hover:bg-newGreen hover:text-newGold transition">
                                             Selengkapnya
                                         </a>
                                     </div>

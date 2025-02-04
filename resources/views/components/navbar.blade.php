@@ -1,7 +1,7 @@
 @props(['settings'])
 
 <div>
-    <div class="">
+    <div class="font-[poppins]">
         <!-- Navbar -->
         <header id="navbar" class="bg-newGreen w-full z-50 fixed top-0 transition-transform duration-500 ease-in-out">
             <nav class="flex justify-between items-center w-full shadow-md md:px-16 px-2">

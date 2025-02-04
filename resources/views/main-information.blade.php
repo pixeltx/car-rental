@@ -2,7 +2,7 @@
     <div class="pt-6 pb-12 md:space-y-10 z-10 mt-[72px] md:mt-[80px]">
         <!-- Pusat Informasi Section -->
         <div class="text-center space-y-6 px-6 md:px-20 lg:px-32 py-8 ">
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] md:drop-shadow-lg">
+            <h1 class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] md:drop-shadow-lg">
                 PUSAT INFORMASI
             </h1>
             <p class="text-sm md:text-lg lg:text-xl text-customGreen font-semibold leading-relaxed">
@@ -51,104 +51,32 @@
         <div class="flex flex-col md:flex-row gap-8">
             <div class="w-full md:1/2">
                 <div class="flex flex-col justify-start space-y-5">
-                    @foreach ($faqs as $faq)
-                    <div class="relative w-[100%] md:w-full bg-newGold  shadow-[6px_6px_10px_-1px_rgba(0,0,0,0.15),-6px_-6px_10px_-1px_rgba(255,255,255,0.8)]">
-                        <input type="checkbox" id="faq" class="absolute peer opacity-0">
-                        <label for="faq" class="absolute top-4 right-4 rotate-0 peer-checked:rotate-180 duration-500 cursor-pointer">
-                            <svg class="w-[20px] h-[20px] fill-[#000000]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
-                            </svg>
-                        </label>
-                        <label class="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center cursor-pointer" for="faq">
-                            {{ $faq->question }}
-                        </label>
-                        <div class="max-h-0 overflow-hidden peer-checked:max-h-[200px] text-customGreen bg-white transition-[max-height] duration-500 ease-in-out">
-                            <p class="p-[20px] text-sm">
-                                {{ $faq->answer }}
-                            </p>
+                    @foreach ($faqs as $index => $faq)
+                        <div class="relative w-full bg-newGold shadow-md">
+                            <!-- Checkbox sebagai trigger -->
+                            <input type="checkbox" id="faq{{ $index }}" class="hidden peer">
+                
+                            <!-- Label mencakup pertanyaan & arrow -->
+                            <label for="faq{{ $index }}" class="flex items-center justify-between cursor-pointer px-5 py-5 min-h-[50px]">
+                                <span class="font-bold break-words flex-1">
+                                    {{ $faq->question }}
+                                </span>
+                
+                                <!-- Arrow -->
+                                <svg class="w-5 h-5 fill-black transition-transform duration-500 peer-checked:rotate-180" 
+                                    viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
+                                </svg>
+                            </label>
+                
+                            <!-- Jawaban -->
+                            <div class="max-h-0 overflow-hidden peer-checked:max-h-[200px] text-customGreen bg-white transition-[max-height] duration-500 ease-in-out">
+                                <p class="p-5 text-sm">
+                                    {{ $faq->answer }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
                     @endforeach
-                    <div class="relative w-[100%] md:w-full bg-newGold  shadow-[6px_6px_10px_-1px_rgba(0,0,0,0.15),-6px_-6px_10px_-1px_rgba(255,255,255,0.8)]">
-                        <input type="checkbox" id="faq2" class="absolute peer opacity-0">
-                        <label for="faq2" class="absolute top-4 right-4 rotate-0 peer-checked:rotate-180 duration-500 cursor-pointer">
-                            <svg class="w-[20px] h-[20px] fill-[#000000]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
-                            </svg>
-                        </label>
-                        <label class="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center cursor-pointer" for="faq2">
-                            Lorem ipsum dolor sit amet?
-                        </label>
-                        <div class="max-h-0 overflow-hidden peer-checked:max-h-[200px] text-customGreen bg-white transition-[max-height] duration-500 ease-in-out">
-                            <p class="p-[20px] text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum nostrum inventore natus modi iure. Ipsum quod velit in necessitatibus vel nesciunt, rerum eius vero tenetur iste illum magnam unde.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="relative w-[100%] md:w-full bg-newGold  shadow-[6px_6px_10px_-1px_rgba(0,0,0,0.15),-6px_-6px_10px_-1px_rgba(255,255,255,0.8)]">
-                        <input type="checkbox" id="faq3" class="absolute peer opacity-0">
-                        <label for="faq3" class="absolute top-4 right-4 rotate-0 peer-checked:rotate-180 duration-500 cursor-pointer">
-                            <svg class="w-[20px] h-[20px] fill-[#000000]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
-                            </svg>
-                        </label>
-                        <label class="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center cursor-pointer" for="faq3">
-                            Lorem ipsum dolor sit amet?
-                        </label>
-                        <div class="max-h-0 overflow-hidden peer-checked:max-h-[200px] text-customGreen bg-white transition-[max-height] duration-500 ease-in-out">
-                            <p class="p-[20px] text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum nostrum inventore natus modi iure. Ipsum quod velit in necessitatibus vel nesciunt, rerum eius vero tenetur iste illum magnam unde.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="relative w-[100%] md:w-full bg-newGold  shadow-[6px_6px_10px_-1px_rgba(0,0,0,0.15),-6px_-6px_10px_-1px_rgba(255,255,255,0.8)]">
-                        <input type="checkbox" id="faq4" class="absolute peer opacity-0">
-                        <label for="faq4" class="absolute top-4 right-4 rotate-0 peer-checked:rotate-180 duration-500 cursor-pointer">
-                            <svg class="w-[20px] h-[20px] fill-[#000000]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
-                            </svg>
-                        </label>
-                        <label class="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center cursor-pointer" for="faq4">
-                            Lorem ipsum dolor sit amet?
-                        </label>
-                        <div class="max-h-0 overflow-hidden peer-checked:max-h-[200px] text-customGreen bg-white transition-[max-height] duration-500 ease-in-out">
-                            <p class="p-[20px] text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum nostrum inventore natus modi iure. Ipsum quod velit in necessitatibus vel nesciunt, rerum eius vero tenetur iste illum magnam unde.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="relative w-[100%] md:w-full bg-newGold  shadow-[6px_6px_10px_-1px_rgba(0,0,0,0.15),-6px_-6px_10px_-1px_rgba(255,255,255,0.8)]">
-                        <input type="checkbox" id="faq5" class="absolute peer opacity-0">
-                        <label for="faq5" class="absolute top-4 right-4 rotate-0 peer-checked:rotate-180 duration-500 cursor-pointer">
-                            <svg class="w-[20px] h-[20px] fill-[#000000]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
-                            </svg>
-                        </label>
-                        <label class="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center cursor-pointer" for="faq5">
-                            Lorem ipsum dolor sit amet?
-                        </label>
-                        <div class="max-h-0 overflow-hidden peer-checked:max-h-[200px] text-customGreen bg-white transition-[max-height] duration-500 ease-in-out">
-                            <p class="p-[20px] text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum nostrum inventore natus modi iure. Ipsum quod velit in necessitatibus vel nesciunt, rerum eius vero tenetur iste illum magnam unde.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="relative w-[100%] md:w-full bg-newGold  shadow-[6px_6px_10px_-1px_rgba(0,0,0,0.15),-6px_-6px_10px_-1px_rgba(255,255,255,0.8)]">
-                        <input type="checkbox" id="faq6" class="absolute peer opacity-0">
-                        <label for="faq6" class="absolute top-4 right-4 rotate-0 peer-checked:rotate-180 duration-500 cursor-pointer">
-                            <svg class="w-[20px] h-[20px] fill-[#000000]" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>
-                            </svg>
-                        </label>
-                        <label class="font-bold tracking-[1px] mx-[20px] h-[50px] flex items-center cursor-pointer" for="faq6">
-                            Lorem ipsum dolor sit amet?
-                        </label>
-                        <div class="max-h-0 overflow-hidden peer-checked:max-h-[200px] text-customGreen bg-white transition-[max-height] duration-500 ease-in-out">
-                            <p class="p-[20px] text-sm">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum nostrum inventore natus modi iure. Ipsum quod velit in necessitatibus vel nesciunt, rerum eius vero tenetur iste illum magnam unde.
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="w-full md:1/2 flex justify-center items-center">

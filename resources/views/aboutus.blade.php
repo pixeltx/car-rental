@@ -2,17 +2,17 @@
     <div class="mt-[72px] md:mt-[80px]">
         <div class="bg-cover" style="background-image: url('{{ asset('img/bg-rent.png') }}')">
             <div class="flex flex-col justify-center items-center text-center space-y-4 md:space-y-8 px-4 md:px-16 lg:px-32 py-8 mb-5 md:mb-10">
-                <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] md:drop-shadow-lg">
+                <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] md:drop-shadow-lg">
                     BrightGlobaltrans
                 </div>
                 <div class="text-sm md:text-lg lg:text-xl text-[#fbf7eb] font-semibold leading-relaxed">
                     penyedia layanan sewa mobil dengan sopir untuk perjalanan lokal dan antar kota, serta layanan sewa mobil internasional untuk destinasi global.
                 </div>
                 <div class="flex flex-row  gap-4 md:gap-10 items-center pb-4">
-                    <a href="{{ route('rent') }}" class="text-sm md:text-xl border-2 bg-newGold border-newGold py-1 px-5 md:px-7 text-customGreen hover:bg-transparent hover:border-baseBackground hover:text-baseBackground transition-colors duration-300">
+                    <a href="{{ route('rent') }}" class="font-[poppins] text-sm md:text-xl border-2 bg-newGold border-newGold py-1 px-5 md:px-7 text-customGreen hover:bg-transparent hover:border-baseBackground hover:text-baseBackground transition-colors duration-300">
                         ORDER NOW
                     </a>
-                    <a href="https://wa.me/+6281214955293" class="text-sm md:text-xl border-2 bg-newGold border-newGold py-1 px-5 md:px-7 text-customGreen hover:bg-transparent hover:border-baseBackground hover:text-baseBackground transition-colors duration-300">
+                    <a href="https://wa.me/+6281214955293" class="font-[poppins] text-sm md:text-xl border-2 bg-newGold border-newGold py-1 px-5 md:px-7 text-customGreen hover:bg-transparent hover:border-baseBackground hover:text-baseBackground transition-colors duration-300">
                         CONTACT
                     </a>
                 </div>
@@ -22,7 +22,7 @@
             <div class="flex flex-col lg:flex-row bg-newGreen p-6 sm:p-8 lg:p-10 rounded-xl gap-6 lg:gap-12">
                 <!-- Section Kiri -->
                 <div class="w-full lg:w-1/2 space-y-6">
-                    <div class="text-[#ffd700] font-semibold text-lg sm:text-xl lg:text-2xl">Tentang Kami</div>
+                    <div class="font-[Raleway] text-[#ffd700] font-semibold text-lg sm:text-xl lg:text-2xl">Tentang Kami</div>
                     <div class="text-white font-bold text-2xl sm:text-3xl lg:text-4xl leading-snug">
                         Travel Door to Door: Perjalanan Nyaman & Aman
                     </div>
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="mx-6 md:mx-12 lg:mx-16 my-8">
-            <div class="text-2xl sm:text-3xl lg:text-5xl font-bold text-center text-[#ffd700] mb-6 lg:mb-10">
+            <div class="font-[Raleway] text-2xl sm:text-3xl lg:text-5xl font-bold text-center text-[#ffd700] mb-6 lg:mb-10">
                 Team Support
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

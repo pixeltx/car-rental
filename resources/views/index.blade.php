@@ -1,10 +1,10 @@
 <x-app :settings="$settings" title="Beranda">
     
-    <div class="overflow-hidden mt-[72px] md:mt-[80px]">
+    <div class="overflow-hidden mt-[30px]">
         <div class="mb-20 ">
             <div id="gallery" class="relative w-full" data-carousel="slide">
                 <!-- Carousel wrapper -->
-                <div class="relative h-[80vh] md:min-h-screen overflow-hidden ">
+                <div class="relative h-[100vh] md:min-h-screen overflow-hidden ">
                     <!-- Slider Images -->
                     <div class="absolute inset-0 z-10">
                         <div class="hidden duration-1000 ease-in-out" data-carousel-item>
@@ -20,13 +20,13 @@
                 
                     <!-- Text Content -->
                     <div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-6 md:px-16 text-center text-white">
-                        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] drop-shadow-lg">
+                        <h1 class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-[#ffd700] drop-shadow-lg">
                             BrightGlobaltrans
                         </h1>
-                        <p class="mt-4 text-sm md:text-lg lg:text-xl text-gray-100 font-medium drop-shadow-lg py-2 md:py-4">
+                        <p class="font-[open-sans] mt-4 text-sm md:text-lg lg:text-xl text-gray-100 font-medium drop-shadow-lg py-2 md:py-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum deserunt dolores hic voluptatum voluptates illo neque ad, fuga quidem quibusdam excepturi sunt officia sed commodi ipsam quos facere corporis praesentium.
                         </p>
-                        <div class="flex flex-col md:flex-row gap-4 mt-6">
+                        <div class="font-[poppins] flex flex-col md:flex-row gap-4 mt-6">
                             <a href="{{ route('rent') }}" class="text-sm md:text-lg border-2 border-newGold py-2 px-6 md:px-8 text-newGold hover:text-white hover:bg-newGreen hover:border-newGreen transition duration-300">
                                 ORDER NOW
                             </a>
@@ -57,17 +57,17 @@
         </div>
         
         
-        <div class="px-8 md:px-28 ">
+        <div class="px-8 md:px-28 font-[open-sans] ">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
                 <!-- Card 1 -->
                 <div id="animate" class="transition-transform transform hover:scale-105 hover:shadow-lg p-6 bg-white rounded-lg flex flex-col items-center">
                     <div class="h-28 flex items-center justify-center">
                         <img src="{{ asset('img/calendar.svg') }}" alt="Calendar Icon" class="w-20 md:w-28">
                     </div>
-                    <p class="text-center my-4 text-4xl md:text-5xl text-newGreen">
-                        3 <span class="text-lg md:text-xl align-top text-newGold">+</span>
+                    <p class="text-center my-4 text-4xl md:text-5xl text-newGreen counter" data-target="3">
+                        0 <span class="text-lg md:text-xl align-top text-newGold font-bold">+</span>
                     </p>
-                    <p class="text-center text-gray-700 font-semibold text-base md:text-lg">
+                    <p class="text-center text-gray-700 font-semibold text-base md:text-xl">
                         Tahun
                     </p>
                 </div>
@@ -77,8 +77,8 @@
                     <div class="h-28 flex items-center justify-center">
                         <img src="{{ asset('img/partner.svg') }}" alt="Partner Icon" class="w-20 md:w-28">
                     </div>
-                    <p class="text-center my-4 text-4xl md:text-5xl text-newGold">
-                        2000<span class="text-lg md:text-xl align-top text-newGreen">+</span>
+                    <p class="text-center my-4 text-4xl md:text-5xl text-newGold counter" data-target="2000">
+                        0<span class="text-lg md:text-xl align-top text-newGreen">+</span>
                     </p>
                     <p class="text-center text-gray-700 font-semibold text-base md:text-lg">
                         Customer
@@ -90,8 +90,8 @@
                     <div class="h-28 flex items-center justify-center">
                         <img src="{{ asset('img/car.svg') }}" alt="Car Icon" class="w-20 md:w-28">
                     </div>
-                    <p class="text-center my-4 text-4xl md:text-5xl text-newGreen">
-                        200<span class="text-lg md:text-xl align-top text-newGold">+</span>
+                    <p class="text-center my-4 text-4xl md:text-5xl text-newGreen counter" data-target="200">
+                        0<span class="text-lg md:text-xl align-top text-newGold">+</span>
                     </p>
                     <p class="text-center text-gray-700 font-semibold text-base md:text-lg">
                         Kendaraan
@@ -103,8 +103,8 @@
                     <div class="h-28 flex items-center justify-center">
                         <img src="{{ asset('img/maps.svg') }}" alt="Maps Icon" class="w-20 md:w-28">
                     </div>
-                    <p class="text-center my-4 text-4xl md:text-5xl text-newGold">
-                        20<span class="text-lg md:text-xl align-top text-newGreen">+</span>
+                    <p class="text-center my-4 text-4xl md:text-5xl text-newGold counter" data-target="20">
+                        0<span class="text-lg md:text-xl align-top text-newGreen">+</span>
                     </p>
                     <p class="text-center text-gray-700 font-semibold text-base md:text-lg">
                         Pilihan Rute
@@ -115,7 +115,7 @@
         
         
         <div class="mt-10 md:mt-16 lg:mt-20">
-            <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-newGold mb-2">
+            <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-newGold mb-2">
                 Layanan Kami
             </div>
             <div class="text-center text-sm md:text-xl mb-4 md:mb-8">
@@ -137,7 +137,7 @@
                             <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
                         </ul>
                     </div>
-                    <div class="flex justify-center pt-16">
+                    <div class="flex justify-center pt-16 font-[poppins]">
                         <a href="https://wa.me/{{ $settings['phone_number'] }}" class="flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-putih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                                 <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
                             </ul>
                         </div>
-                        <div class="flex justify-center pt-4">
+                        <div class="flex justify-center pt-4 font-[poppins]">
                             <a href="https://wa.me/{{ $settings['phone_number'] }}" class=" flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-putih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
                             <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
                         </ul>
                     </div>
-                    <div class="flex justify-center pt-16">
+                    <div class="flex justify-center pt-16 font-[poppins]">
                         <a href="https://wa.me/{{ $settings['phone_number'] }}" class=" flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-putih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
                     </div>
                 </div>
@@ -197,8 +197,8 @@
                     Kami menyediakan rute-rute ke kota-kota besar yang tersedia setiap harinya
                 </div>
                 <div class="flex md:flex-row flex-col gap-3 pb-4 text-base md:text-lg">
-                    <button id="ruteKhusus" class="text-newGreen bg-[#fbf7eb] py-2 px-7 font-semibold rounded-xl" onclick="showRuteKhusus()">Rute Khusus</button>
-                    <button id="ruteInternational" class="text-newGreen bg-[#fbf7eb] py-2 px-7 font-semibold rounded-xl" onclick="showRuteInternational()">Rute Internasional</button>
+                    <button id="ruteKhusus" class="font-[poppins] text-newGreen bg-[#fbf7eb] py-2 px-7 font-semibold rounded-xl" onclick="showRuteKhusus()">Rute Khusus</button>
+                    <button id="ruteInternational" class="font-[poppins] text-newGreen bg-[#fbf7eb] py-2 px-7 font-semibold rounded-xl" onclick="showRuteInternational()">Rute Internasional</button>
                 </div>
                 
                 <div id="ruteContainer" class="bg-[#f6f1eb] rounded-lg text-base md:text-lg opacity-0 transition-opacity duration-500">
@@ -225,7 +225,7 @@
                         <div class="bg-newGreen w-full h-0.5 "></div>
                     </div>
                     <div class="p-5 flex justify-center items-center">
-                        <a href="https://wa.me/{{ $settings['phone_number'] }}" class="flex justify-center items-center text-[#fbf7eb] bg-newGold w-full h-14 rounded-xl text-lg  md:text-xl font-bold border-2 border-newGold hover:bg-[#f6f1eb] hover:text-newGold  transition duration-300">Hubungi Kami</a>
+                        <a href="https://wa.me/{{ $settings['phone_number'] }}" class="font-[poppins] flex justify-center items-center text-[#fbf7eb] bg-newGold w-full h-14 rounded-xl text-lg  md:text-xl font-bold border-2 border-newGold hover:bg-[#f6f1eb] hover:text-newGold  transition duration-300">Hubungi Kami</a>
                     </div>
                 </div>
             </div>
@@ -233,7 +233,7 @@
         <div class="mt-10 md:mt-16 lg:mt-20">
             <div>
                 <div>
-                    <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
+                    <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
                         Paling Populer
                     </div>
                     <div class="text-center text-sm md:text-xl mb-4 md:mb-8">
@@ -250,7 +250,7 @@
                             {{-- Deskripsi singkat --}}
                             <div class="w-full md:w-full lg:w-8/12 flex flex-col justify-between">
                                 <div>
-                                    <h2 class="text-2xl font-bold">{{ $car->car_name }}</h2>
+                                    <h2 class="font-[Raleway] text-2xl font-bold">{{ $car->car_name }}</h2>
                                     <div class="grid grid-cols-2 md:flex gap-4 my-6 md:my-2 text-sm">
                                         <div class="flex items-center gap-2">
                                             <svg class="w-4 h-4 fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M135.2 117.4L109.1 192H402.9l-26.1-74.6C372.3 104.6 360.2 96 346.6 96H165.4c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32H346.6c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2V400v48c0 17.7-14.3 32-32 32H448c-17.7 0-32-14.3-32-32V400H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V400 256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"></path></svg>
@@ -279,7 +279,7 @@
                                 {{-- Harga dan tombol selengkapnya --}}
                                 <div class="flex flex-col md:flex-row justify-between lg:mt-0 mt-8 space-y-4">
                                     <div class="mb-4 md:mb-0">
-                                        <a href="{{ route('car-detail', ['id' => $car->id]) }}" class="border-2 border-newGold bg-newGold text-black py-2 px-4 rounded-lg hover:bg-newGreen hover:text-newGold transition">
+                                        <a href="{{ route('car-detail', ['id' => $car->id]) }}" class="font-[poppins] border-2 border-newGold bg-newGold text-black py-2 px-4 rounded-lg hover:bg-newGreen hover:text-newGold transition">
                                             Selengkapnya
                                         </a>
                                     </div>
@@ -298,7 +298,7 @@
         </div>
         
         <div class=" mt-10 md:mt-16 lg:mt-20 mx-6 md:mx-12 lg:mx-16">
-            <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
+            <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
                 Galeri
             </div>
             <div class="text-center text-sm md:text-xl mb-4 md:mb-8">
@@ -307,13 +307,13 @@
             <div class="bg-newGreen p-5 md:p-10">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     @foreach ($galleries as $gallery)    
-                    <div><img src="{{ asset('storage/' . $gallery->image) }}" alt="" class="w-full md:w-[27rem] md:h-[19rem] object-cover transition-transform transform hover:scale-105 hover:shadow-lg"></div>
+                    <div><img src="{{ asset('storage/' . $gallery->image) }}" alt="" class="w-full lg:w-[27rem] md:h-[19rem] object-cover transition-transform transform hover:scale-105 hover:shadow-lg"></div>
                     @endforeach
                 </div>
             </div>
         </div>
         <div class="mt-10 md:mt-16 lg:mt-20 mx-6 md:mx-12 lg:mx-16 my-8">
-            <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
+            <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
                 Blog dan Artikel Kami
             </div>
             <div class="text-center text-sm md:text-xl mb-4 md:mb-8">
@@ -330,7 +330,7 @@
                         <div class="pt-4">
                             <h3 class="text-lg font-bold text-gray-800">{{ $blog->content }}</h3>
                             <div class="text-sm text-gray-500 mt-2">Published on: {{ $blog->created_at->format('d F, Y') }}</div> <!-- Tanggal ditambahkan di sini -->
-                            <a href="{{ route('blog-detail', ['id' => $blog->id]) }}" class="flex items-center text-newGold hover:text-newGreen font-semibold mt-4 transition duration-300">
+                            <a href="{{ route('blog-detail', ['id' => $blog->id]) }}" class="font-[poppins] flex items-center text-newGold hover:text-newGreen font-semibold mt-4 transition duration-300">
                                 READ MORE
                                 <span class="ml-2 text-xl">&rarr;</span>
                             </a>
@@ -341,7 +341,7 @@
             </div>
         </div>
         <div class="mt-10 md:mt-16 lg:mt-20 mx-6 md:mx-12 lg:mx-16 my-8">
-            <div class="text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
+            <div class="font-[Raleway] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-2">
                 Hubungi Kami
             </div>
             <div class="text-center text-sm md:text-xl mb-4 md:mb-8">
@@ -389,4 +389,5 @@
             
         </div>
     </div>
+    
 </x-app>
