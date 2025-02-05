@@ -42,7 +42,7 @@ Route::get('/information', [MainInformationController::class, 'index'])->name('i
 // Route::get('/car-detail', function () {return view('car-detail');})->name('car-detail');
 Route::get('/car-detail/{id}', [CarController::class, 'show'])->name('car-detail');
 
-Route::get('/blog', [BlogController::class, 'index'])->name('blog');
-Route::get('/blog-detail/{id}', [BlogController::class, 'show'])->name('blog-detail');
+// Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+// Route::get('/blog-detail/{id}', [BlogController::class, 'show'])->name('blog-detail');
 
 require __DIR__.'/auth.php';
