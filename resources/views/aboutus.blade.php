@@ -114,26 +114,26 @@
             <div class="flex flex-col lg:flex-row gap-8 p-6">
                 <!-- Kontak Informasi -->
                 <div class="w-full lg:w-1/2 space-y-6">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 fade-animation">
                         <!-- Kontak Item dengan Hover -->
-                        <a href="https://wa.me/{{ $settings['phone_number'] }}" class="fade-animation bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="https://wa.me/{{ $settings['phone_number'] }}" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/wa-hubungi-kami.svg') }}" alt="WhatsApp" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">{{ $settings['phone_number'] }}</span>
+                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">0812-1495-5293</span>
                         </a>
                     
-                        <a href="" class="fade-animation bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="mailto:{{ $settings['email_address'] }}" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/email-hubungi-kami.svg') }}" alt="Email" class="w-8 md:w-10 flex-shrink-0">
                             <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">Global@trans.com</span>
                         </a>
                     
-                        <a href="https://www.instagram.com/bright_global_trans/" class="fade-animation bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="{{ $settings['instagram_link'] }}" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/ig-hubungi-kami.svg') }}" alt="Instagram" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">bright_global_trans</span>
+                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">@bright_global_trans</span>
                         </a>
                     
-                        <a href="" class="fade-animation bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="{{ $settings['facebook_link'] }}" class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/tiktok-hubungi-kami.svg') }}" alt="Facebook" class="w-8 md:w-10 flex-shrink-0">
-                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">GlobalTrans</span>
+                            <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">@brightglobaltrans</span>
                         </a>
                     </div>
                     
