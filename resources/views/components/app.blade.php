@@ -26,7 +26,7 @@
 </head>
 
 
-<body class="font-[inter] flex flex-col min-h-screen">
+<body class="font-[inter] flex flex-col min-h-screen bg-putih">
     @stack('settings')
     
     <x-navbar :settings="$settings"/>
@@ -54,28 +54,31 @@
             setTimeout(() => {
                 ruteContainer.innerHTML = `
                             <div class="py-4">
-                                <span class="text-lg md:text-xl font-semibold px-10">Untuk perjalanan antar kota</span>
+                                <span class=" text-base md:text-lg font-semibold px-10">Untuk perjalanan antar kota</span>
                             </div>
                             <div>
-                                <div class="bg-[#494d2d] text-[#fbf7eb] px-10 py-4">Bandung - Bandara</div>
+                                <div class="bg-[#494d2d] text-putih px-10 py-4">Bandung - Bandara Soekarno-Hatta </div>
                             </div>
                             <div>
-                                <div class="px-10 py-4">Bandung - Yogyakarta</div>
+                                <div class="px-10 py-4">Bandung - Bandara Kertajati</div>
                             </div>
                             <div>
-                                <div class="bg-[#494d2d] text-[#fbf7eb] px-10 py-4">Bandung - Bali</div>
+                                <div class="bg-[#494d2d] text-putih px-10 py-4">Bandung - Yogyakarta</div>
                             </div>
                             <div>
-                                <div class="px-10 py-4">Bandung - Semarang</div>
+                                <div class="px-10 py-4">Bandung - Bali</div>
                             </div>
                             <div>
-                                <div class="bg-[#494d2d] text-[#fbf7eb] px-10 py-4">Bandung - Surabaya</div>
+                                <div class="bg-[#494d2d] text-putih px-10 py-4">Bandung - Semarang</div>
+                            </div>
+                            <div>
+                                <div class="px-10 py-4">Bandung - Surabaya</div>
                             </div>
                             <div class="mx-6 mt-8 mb-2">
                                 <div class="bg-newGreen w-full h-0.5"></div>
                             </div>
                             <div class="p-5">
-                                <a href="https://wa.me/${phoneNumber}" class="font-[poppins] flex justify-center items-center text-[#fbf7eb] bg-newGold w-full h-14 rounded-xl text-lg md:text-xl font-bold border-2 border-newGold hover:bg-[#f6f1eb] hover:text-newGold trans transition duration-300">Hubungi Kami</a>
+                                <a href="https://wa.me/${phoneNumber}" class="font-[poppins] flex justify-center items-center text-putih bg-newGold w-full h-14 rounded-xl text-lg md:text-xl font-bold border-2 border-newGold hover:bg-[#f6f1eb] hover:text-newGold trans transition duration-300">Hubungi Kami</a>
                             </div>
                         `;
                 ruteContainer.style.opacity = "1"; // Fade-in konten
@@ -88,22 +91,22 @@
             setTimeout(() => {
                 ruteContainer.innerHTML = `
                             <div class="py-4">
-                                <span class="text-lg md:text-xl font-semibold px-10">Untuk perjalanan internasional</span>
+                                <span class="text-base md:text-lg font-semibold px-10">Untuk perjalanan internasional</span>
                             </div>
                             <div>
-                                <div class="bg-[#494d2d] text-[#fbf7eb] px-10 py-4">Swiss</div>
+                                <div class="bg-[#494d2d] text-putih px-10 py-4">Swiss</div>
                             </div>
                             <div>
                                 <div class="px-10 py-4">Jerman</div>
                             </div>
                             <div>
-                                <div class="bg-[#494d2d] text-[#fbf7eb] px-10 py-4">Singapura</div>
+                                <div class="bg-[#494d2d] text-putih px-10 py-4">Singapura</div>
                             </div>
                             <div>
                                 <div class="px-10 py-4">Korea Selatan</div>
                             </div>
                             <div>
-                                <div class="bg-[#494d2d] text-[#fbf7eb] px-10 py-4">Jepang</div>
+                                <div class="bg-[#494d2d] text-putih px-10 py-4">Jepang</div>
                             </div>
                             <div>
                                 <div class="px-10 py-4">Sydney, Australia</div>
@@ -112,7 +115,7 @@
                                 <div class="bg-newGreen w-full h-0.5"></div>
                             </div>
                             <div class="p-5">
-                                <a href="https://wa.me/${phoneNumber}" class="font-[poppins] flex justify-center items-center text-[#fbf7eb] bg-newGold w-full h-14 rounded-xl text-lg md:text-xl font-bold border-2 border-newGold hover:bg-[#f6f1eb] hover:text-newGold trans transition duration-300">Hubungi Kami</a>
+                                <a href="https://wa.me/${phoneNumber}" class="font-[poppins] flex justify-center items-center text-putih bg-newGold w-full h-14 rounded-xl text-lg md:text-xl font-bold border-2 border-newGold hover:bg-[#f6f1eb] hover:text-newGold trans transition duration-300">Hubungi Kami</a>
                             </div>
                         `;
                 ruteContainer.style.opacity = "1";
@@ -123,17 +126,17 @@
         function setActiveButton(activeId, inactiveId) {
             document
                 .getElementById(activeId)
-                .classList.remove("text-newGreen", "bg-[#fbf7eb]");
+                .classList.remove("text-newGreen", "bg-putih");
             document
                 .getElementById(activeId)
-                .classList.add("text-[#fbf7eb]", "bg-newGold");
+                .classList.add("text-putih", "bg-newGold");
 
             document
                 .getElementById(inactiveId)
-                .classList.remove("text-[#fbf7eb]", "bg-newGold");
+                .classList.remove("text-putih", "bg-newGold");
             document
                 .getElementById(inactiveId)
-                .classList.add("text-newGreen", "bg-[#fbf7eb]");
+                .classList.add("text-newGreen", "bg-putih");
         }
 
         // Memanggil fungsi untuk menampilkan Rute Khusus saat halaman dimuat

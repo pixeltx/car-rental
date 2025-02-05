@@ -14,7 +14,7 @@
                </div>
                <div class="flex justify-between items-center">
                    <div>
-                       <a href="{{ route('blog-detail') }}" class="rounded-lg text-sm md:text-xl border-2 bg-newGold border-newGold py-1 px-5 md:px-7 text-putih hover:bg-transparent hover:border-newGold hover:text-newGold transition-colors duration-300">
+                       <a href="{{ route('blog-detail') }}" class="rounded-lg text-sm md:text-xl border-2 bg-newGold border-newGold py-1 px-5 md:px-7 text-bgPutih hover:bg-transparent hover:border-newGold hover:text-newGold transition-colors duration-300">
                            Read More
                        </a>
                    </div>
@@ -36,7 +36,7 @@
                  </div>
                  <div class="flex justify-between items-center">
                      <div>
-                         <a href="{{ route('blog-detail') }}" class="rounded-lg text-sm md:text-xl border-2 bg-newGold border-newGold py-1 px-5 md:px-7 text-putih hover:bg-transparent hover:border-newGold hover:text-newGold transition-colors duration-300">
+                         <a href="{{ route('blog-detail') }}" class="rounded-lg text-sm md:text-xl border-2 bg-newGold border-newGold py-1 px-5 md:px-7 text-bgPutih hover:bg-transparent hover:border-newGold hover:text-newGold transition-colors duration-300">
                              Read More
                          </a>
                      </div>
@@ -57,7 +57,7 @@
                  </div>
                  <div class="flex justify-between items-center">
                      <div>
-                         <a href="{{ route('blog-detail') }}" class="rounded-lg text-sm md:text-xl border-2 bg-newGold border-newGold py-1 px-5 md:px-7 text-putih hover:bg-transparent hover:border-newGold hover:text-newGold transition-colors duration-300">
+                         <a href="{{ route('blog-detail') }}" class="rounded-lg text-sm md:text-xl border-2 bg-newGold border-newGold py-1 px-5 md:px-7 text-bgPutih hover:bg-transparent hover:border-newGold hover:text-newGold transition-colors duration-300">
                              Read More
                          </a>
                      </div>
@@ -71,7 +71,7 @@
           <!-- Section Kanan -->
           <div class="hidden lg:block lg:w-2/5 ">
               <div class="mb-6">
-                  <a href="" class="rounded-lg text-sm md:text-xl border-2 bg-newGold border-newGold py-1 px-5 md:px-7 text-putih hover:bg-transparent hover:border-newGold hover:text-newGold transition-colors duration-300">
+                  <a href="" class="rounded-lg text-sm md:text-xl border-2 bg-newGold border-newGold py-1 px-5 md:px-7 text-bgPutih hover:bg-transparent hover:border-newGold hover:text-newGold transition-colors duration-300">
                       Latest Post
                   </a>
               </div>

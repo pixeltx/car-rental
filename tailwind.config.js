@@ -39,9 +39,10 @@ export default {
                 gold: "#D5BA8F",
                 bigTitle: "#deaf37",
                 textGreen: "#4b5320",
-                newGreen: "#3e8e41",
-                newGold: "#ffc403",
-                putih: "#fffdf9",
+                newGreen: "#004225",
+                newGold: "#FFB000",
+                putih: "#F5F5F5",
+                hitam:"#0C0404"
             },
             spacing: {
                 100: "75rem",

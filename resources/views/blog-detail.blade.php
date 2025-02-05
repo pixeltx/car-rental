@@ -1,7 +1,7 @@
 <x-app :settings="$settings">
     <div class="mx-8 sm:mx-6 lg:mx-16  mb-10 mt-[100px] md:mt-[120px]">
         <div>
-            <div class="font-[Poppins] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-[#ffd700] mb-10">
+            <div class="font-[Poppins] text-3xl md:text-5xl lg:text-6xl font-bold text-center text-newGold mb-10">
                 {{ $blog->title }}
             </div>
             {{-- <div class="text-center text-sm sm:text-lg md:text-xl mb-4 md:mb-8">
