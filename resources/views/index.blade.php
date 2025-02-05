@@ -57,19 +57,8 @@
         </div>
         
         <div class="px-8 md:px-28">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
-                <!-- Card 1 -->
-                <div id="animate" class="transition-transform transform hover:scale-105 hover:shadow-lg p-6 bg-white rounded-lg flex flex-col items-center">
-                    <div class="h-28 flex items-center justify-center">
-                        <img src="{{ asset('img/calendar.svg') }}" alt="Calendar Icon" class="w-20 md:w-28">
-                    </div>
-                    <p class="text-center my-4 text-4xl md:text-5xl text-newGreen counter" data-target="3">
-                        0 <span class="text-lg md:text-xl align-top text-newGold font-bold">+</span>
-                    </p>
-                    <p class="text-center text-gray-700 font-semibold text-base md:text-xl">
-                        Tahun
-                    </p>
-                </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
+               
         
                 <!-- Card 2 -->
                 <div id="animate" class="transition-transform transform hover:scale-105 hover:shadow-lg p-6 bg-white rounded-lg flex flex-col items-center">
