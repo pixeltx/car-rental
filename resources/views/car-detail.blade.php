@@ -110,18 +110,13 @@
                     </div>
                     <div class="bg-[#f0f0f0] px-10 py-6 md:py-8 min-h-96 max-h-96">
                         <ul class="list-disc list-outside text-base md:text-lg">
-                            <li>Dummy</li>
-                            <li>Dummy</li>
-                            <li>Dummy</li>
-                            <li>Dummy</li>
-                            <li>Dummy</li>
-                            <li>Dummy</li>
-                            <li>Dummy</li>
-                            <li>Dummy</li>
+                            @foreach ($car->facilities as $facility)
+                                <li>{{ $facility->facility }}</li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
-                <div class="w-full md:w-96 shadow-lg">
+                {{-- <div class="w-full md:w-96 shadow-lg">
                     <div class="bg-newGreen text-center font-semibold text-2xl md:text-3xl py-4">
                         Exclude
                     </div>
@@ -137,7 +132,7 @@
                             <li>Dummy</li>
                         </ul>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

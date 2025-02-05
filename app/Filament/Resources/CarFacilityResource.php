@@ -48,7 +48,6 @@ class CarFacilityResource extends Resource
                 ->disk('public') // Ensure the correct disk is used
                 ->maxFiles(3)
                 ->maxSize(2048)
-                ->required()
                 ->saveRelationshipsUsing(function ($component, $state, $record) {
                     $record->images()->delete();
                     foreach ($state as $image) {
