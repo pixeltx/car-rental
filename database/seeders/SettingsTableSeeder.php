@@ -18,5 +18,7 @@ class SettingsTableSeeder extends Seeder
         Setting::create(['key' => 'tiktok_link', 'value' => 'https://tiktok.com/example']);
         Setting::create(['key' => 'twitter_link', 'value' => 'https://twitter.com/example']);
         Setting::create(['key' => 'instagram_link', 'value' => 'https://instagram.com/example']);
+        Setting::create(['key' => 'cara_peminjaman', 'value' => 'Cara peminjaman']);
+        Setting::create(['key' => 'syarat_ketentuan', 'value' => 'Syarat dan ketentuan']);
     }
 }

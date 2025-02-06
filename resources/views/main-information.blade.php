@@ -18,15 +18,7 @@
             <div class="bg-newGold rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
                 <h2 class="text-lg md:text-xl font-bold text-center ">TATA CARA PEMINJAMAN</h2>
                 <p class=" text-justify leading-relaxed mt-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, maxime incidunt sit tenetur vel fugiat. Quos reiciendis,
-                    consequuntur enim incidunt delectus nisi at, similique veniam ipsum quae, laborum inventore numquam. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Minus a mollitia dolores excepturi doloremque, animi eveniet delectus totam officiis eligendi.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, maxime incidunt sit tenetur vel fugiat. Quos reiciendis,
-                    consequuntur enim incidunt delectus nisi at, similique veniam ipsum quae, laborum inventore numquam. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Minus a mollitia dolores excepturi doloremque, animi eveniet delectus totam officiis eligendi.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, maxime incidunt sit tenetur vel fugiat. Quos reiciendis,
-                    consequuntur enim incidunt delectus nisi at, similique veniam ipsum quae, laborum inventore numquam. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Minus a mollitia dolores excepturi doloremque, animi eveniet delectus totam officiis eligendi.
+                    {{ $settings['cara_peminjaman'] }}
                 </p>
             </div>
 
@@ -34,15 +26,7 @@
             <div class="bg-newGold rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300">
                 <h2 class="text-lg md:text-xl font-bold text-center ">SYARAT DAN KETENTUAN</h2>
                 <p class=" text-justify leading-relaxed mt-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, maxime incidunt sit tenetur vel fugiat. Quos reiciendis,
-                    consequuntur enim incidunt delectus nisi at, similique veniam ipsum quae, laborum inventore numquam. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Minus a mollitia dolores excepturi doloremque, animi eveniet delectus totam officiis eligendi.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, maxime incidunt sit tenetur vel fugiat. Quos reiciendis,
-                    consequuntur enim incidunt delectus nisi at, similique veniam ipsum quae, laborum inventore numquam. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Minus a mollitia dolores excepturi doloremque, animi eveniet delectus totam officiis eligendi.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, maxime incidunt sit tenetur vel fugiat. Quos reiciendis,
-                    consequuntur enim incidunt delectus nisi at, similique veniam ipsum quae, laborum inventore numquam. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit. Minus a mollitia dolores excepturi doloremque, animi eveniet delectus totam officiis eligendi.
+                    {{ $settings['syarat_ketentuan'] }}
                 </p>
             </div>
         </div>
