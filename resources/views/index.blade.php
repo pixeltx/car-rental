@@ -109,53 +109,92 @@
                 Pilih Layanan Terbaik Dari Kami
             </div>
             <div class="px-8 py-10 flex flex-wrap justify-center gap-5">
-                <!-- REGULER Section -->
-                <div class= "opacity-0 transform translate-y-10 transition-all duration-1000 fade-animation bg-newGreen px-5 py-4 rounded-xl text-putih w-full sm:w-80 md:w-96 lg:w-[23rem]">
-                    <div class="text-center text-putih font-semibold text-2xl">REGULER</div>
-                    <div>
-                        <img src="{{ asset('img/dummyImage.jpg') }}" class="rounded-lg pt-3 pb-10 w-full">
+                @foreach ($mostPickedCars as $mostPickedCar)
+                    <div class="opacity-0 transform translate-y-10 transition-all duration-1000 fade-animation bg-newGold rounded-xl p-2 w-full sm:w-80 md:w-96 lg:w-[23rem]">
+                        <div class="text-center text-putih font-semibold text-xl pb-2 w-full">
+                            Most Picked
+                        </div>
+                        <div class=" bg-newGreen px-5 py-4 rounded-xl text-putih w-full">
+                            <div class="text-center text-putih font-semibold text-2xl">{{ $mostPickedCar->car_name }}</div>
+                            <div>
+                                <img src="{{ asset('storage/' . $mostPickedCar->image) }}" class="rounded-lg pt-3 pb-10 w-full">
+                            </div>
+                            <div>
+                                <ul class="list-outside">
+                                    @foreach ($mostPickedCar->facilities as $carFacility)
+                                        <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> {{ $carFacility->facility->name }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            <div class="flex justify-center pt-4 font-[poppins]">
+                                <a href="https://wa.me/{{ $settings['phone_number'] }}" class=" flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-bgPutih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <ul class="list-outside">
-                            <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
-                            <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
-                            <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
-                            <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
-                            <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
-                        </ul>
-                    </div>
-                    <div class="flex justify-center pt-16 font-[poppins]">
-                        <a href="https://wa.me/{{ $settings['phone_number'] }}" class="flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-bgPutih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
-                    </div>
-                </div>
+                @endforeach
+
+                    <!-- REGULER Section -->
+                    {{-- <div class= "opacity-0 transform translate-y-10 transition-all duration-1000 fade-animation bg-newGreen px-5 py-4 rounded-xl text-putih w-full sm:w-80 md:w-96 lg:w-[23rem]">
+                        <div class="text-center text-putih font-semibold text-2xl">{{ $mostPickedCar->car_name }}</div>
+                        <div>
+                            <img src="{{ asset('storage/' . $mostPickedCar->image) }}" class="rounded-lg pt-3 pb-10 w-full">
+                        </div>
+                        <div>
+                            <ul class="list-outside">
+                                @foreach ($mostPickedCar->facilities as $carFacility)
+                                <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> {{ $carFacility->facility->name }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <div class="flex justify-center pt-16 font-[poppins]">
+                            <a href="https://wa.me/{{ $settings['phone_number'] }}" class="flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-bgPutih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
+                        </div>
+                    </div> --}}
         
                 <!-- Most Picked Section -->
-                <div class="opacity-0 transform translate-y-10 transition-all duration-1000 fade-animation bg-newGold rounded-xl p-2 w-full sm:w-80 md:w-96 lg:w-[23rem]">
+                {{-- <div class="opacity-0 transform translate-y-10 transition-all duration-1000 fade-animation bg-newGold rounded-xl p-2 w-full sm:w-80 md:w-96 lg:w-[23rem]">
                     <div class="text-center text-putih font-semibold text-xl pb-2 w-full">
                         Most Picked
                     </div>
                     <div class=" bg-newGreen px-5 py-4 rounded-xl text-putih w-full">
-                        <div class="text-center text-putih font-semibold text-2xl">CHARTER</div>
-                        <div>
-                            <img src="{{ asset('img/dummyImage.jpg') }}" class="rounded-lg pt-3 pb-10 w-full">
-                        </div>
-                        <div>
-                            <ul class="list-outside">
-                                <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
-                                <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
-                                <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
-                                <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
-                                <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center pt-4 font-[poppins]">
-                            <a href="https://wa.me/{{ $settings['phone_number'] }}" class=" flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-bgPutih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
-                        </div>
+                        @if ($mostPickedCars)
+                            <div class="text-center text-putih font-semibold text-2xl">{{ $mostPickedCar->car_name }}</div>
+                            <div>
+                                <img src="{{ asset('storage/' . $mostPickedCar->image) }}" class="rounded-lg pt-3 pb-10 w-full">
+                            </div>
+                            <div>
+                                <ul class="list-outside">
+                                    @foreach ($mostPickedCar->facilities as $carFacility)
+                                        <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> {{ $carFacility->facility->name }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            <div class="flex justify-center pt-4 font-[poppins]">
+                                <a href="https://wa.me/{{ $settings['phone_number'] }}" class=" flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-bgPutih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
+                            </div>
+                        @else
+                            <div class="text-center text-putih font-semibold text-2xl">CHARTER</div>
+                            <div>
+                                <img src="{{ asset('img/dummyImage.jpg') }}" class="rounded-lg pt-3 pb-10 w-full">
+                            </div>
+                            <div>
+                                <ul class="list-outside">
+                                    <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
+                                    <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
+                                    <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
+                                    <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
+                                    <li class="flex gap-2"> <img src="{{ asset('img/Checklist.svg') }}" alt=""> dummy</li>
+                                </ul>
+                            </div>
+                            <div class="flex justify-center pt-4 font-[poppins]">
+                                <a href="https://wa.me/{{ $settings['phone_number'] }}" class=" flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-bgPutih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
+                            </div>
+                        @endif
                     </div>
-                </div>
+                </div> --}}
         
                 <!-- INTERNATIONAL Section -->
-                <div class="opacity-0 transform translate-y-10 transition-all duration-1000 fade-animation bg-newGreen px-5 py-4 rounded-xl text-putih w-full sm:w-80 md:w-96 lg:w-[23rem]">
+                {{-- <div class="opacity-0 transform translate-y-10 transition-all duration-1000 fade-animation bg-newGreen px-5 py-4 rounded-xl text-putih w-full sm:w-80 md:w-96 lg:w-[23rem]">
                     <div class="text-center text-putih font-semibold text-2xl">INTERNATIONAL</div>
                     <div>
                         <img src="{{ asset('img/dummyImage.jpg') }}" class="rounded-lg pt-3 pb-10 w-full">
@@ -172,7 +211,7 @@
                     <div class="flex justify-center pt-16 font-[poppins]">
                         <a href="https://wa.me/{{ $settings['phone_number'] }}" class=" flex justify-center items-center bg-newGold text rounded-lg w-96 h-14 text-bgPutih font-semibold text-xl border-2 border-newGold hover:bg-newGreen hover:text-newGold transition duration-300">Pesan</a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         <div class="bg-cover mt-10 md:mt-16 lg:mt-20" style="background-image: url('{{ asset('img/bg-rent.png') }}')">

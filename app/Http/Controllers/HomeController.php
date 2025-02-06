@@ -13,9 +13,13 @@ class HomeController extends Controller
     public function index()
     {
         $cars = Car::with(['brand', 'model'])->get();
+        $mostPickedCars = Car::where('most_picked', true)
+            ->with('facilities.facility')
+            ->orderBy('most_picked', 'desc')
+            ->take(3)
+            ->get(); // Untuk Fetch Data Mobil Terpopuler dengan relasi fasilitas
         $galleries = Gallery::all();
-        $blogs = Blog::all();
         $settings = Setting::all()->pluck('value', 'key')->toArray();
-        return view('index', compact('cars', 'galleries', 'blogs', 'settings'));
+        return view('index', compact('cars', 'mostPickedCars', 'galleries', 'settings'));
     }
 }

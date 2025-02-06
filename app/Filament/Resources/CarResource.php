@@ -9,12 +9,15 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
+use Filament\Tables\Columns\ToggleColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Filament\Tables\Actions\RestoreAction;
+use Filament\Tables\Columns\BooleanColumn;
 use App\Filament\Resources\CarResource\Pages;
 use Filament\Tables\Actions\RestoreBulkAction;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -81,6 +84,9 @@ class CarResource extends Resource
                     ->required(),
                 Textarea::make('description')
                     ->label('Deskripsi'),
+                // Toggle::make('most_picked')
+                //     ->label('Paling Populer')
+                //     ->inline(false),
             ]);
     }
 
@@ -101,12 +107,15 @@ class CarResource extends Resource
                 TextColumn::make('price')
                     ->label('Harga/Hari')
                     ->formatStateUsing(fn ($state) => 'IDR ' . number_format($state, 0, ',', '.')),
+                ToggleColumn::make('most_picked')
+                    ->label('Sering Dipilih'),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

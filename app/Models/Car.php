@@ -21,6 +21,7 @@ class Car extends Model
         'seat_capacity',
         'price',
         'description',
+        'most_picked',
     ];
 
     protected static function boot()
