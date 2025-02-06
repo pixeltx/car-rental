@@ -21,6 +21,16 @@ class GalleryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-photo';
 
+    public static function getLabel(): string
+    {
+        return 'Galleri';
+    }
+
+    public static function getPluralLabel(): string
+    {
+        return 'Galleri';
+    }
+
     public static function form(Form $form): Form
     {
         return $form

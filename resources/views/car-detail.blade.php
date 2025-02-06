@@ -103,7 +103,7 @@
                     <div class="bg-[#f0f0f0] px-10 py-6 md:py-8 min-h-96 max-h-96">
                         <ul class="list-disc list-outside text-base md:text-lg">
                             @foreach ($car->facilities as $facility)
-                                <li>{{ $facility->facility }}</li>
+                                <li>{{ $facility->facility->name }}</li>
                             @endforeach
                         </ul>
                     </div>

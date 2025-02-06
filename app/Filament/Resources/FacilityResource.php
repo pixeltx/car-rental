@@ -4,43 +4,43 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
+use App\Models\Facility;
 use Filament\Forms\Form;
-use App\Models\Testimony;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
-use Filament\Tables\Columns\ImageColumn;
-use Filament\Forms\Components\FileUpload;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Resources\TestimonyResource\Pages;
+use App\Filament\Resources\FacilityResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\TestimonyResource\RelationManagers;
+use App\Filament\Resources\FacilityResource\RelationManagers;
 
-class TestimonyResource extends Resource
+class FacilityResource extends Resource
 {
-    protected static ?string $model = Testimony::class;
+    protected static ?string $model = Facility::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-star';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+
+    protected static ?string $navigationGroup = 'Kendaraan';
 
     public static function getLabel(): string
     {
-        return 'Testimoni';
+        return 'Jenis Fasilitas';
     }
 
     public static function getPluralLabel(): string
     {
-        return 'Testimoni';
+        return 'Jenis Fasilitas';
     }
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                FileUpload::make('image')
-                    ->label('Gambar')
-                    ->image()
-                    ->directory('uploads/testimonies')
-                    ->maxSize(2048)
-                    ->required(),
+                TextInput::make('name')
+                    ->label('Nama Fasilitas')
+                    ->required()
+                    ->placeholder('Masukkan nama fasilitas'),
             ]);
     }
 
@@ -48,9 +48,10 @@ class TestimonyResource extends Resource
     {
         return $table
             ->columns([
-                ImageColumn::make('image')
-                    ->label('Gambar')
-                    ->size(100, 100),
+                TextColumn::make('name')
+                    ->label('Nama Fasilitas')
+                    ->searchable()
+                    ->sortable(),
             ])
             ->filters([
                 //
@@ -75,9 +76,9 @@ class TestimonyResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTestimonies::route('/'),
-            'create' => Pages\CreateTestimony::route('/create'),
-            'edit' => Pages\EditTestimony::route('/{record}/edit'),
+            'index' => Pages\ListFacilities::route('/'),
+            'create' => Pages\CreateFacility::route('/create'),
+            'edit' => Pages\EditFacility::route('/{record}/edit'),
         ];
     }
 }

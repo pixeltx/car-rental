@@ -43,20 +43,18 @@ class CarResource extends Resource
         return $form
             ->schema([
                 TextInput::make('car_name')
-                    ->label('Nama Mobil')
+                    ->label('Nama Kendaraan')
                     ->required(),
                 Select::make('brand_id')
                     ->label('Brand')
                     ->relationship('brand', 'brand_name')
                     ->required(),
                 Select::make('model_id')
-                    ->label('Model Mobil')
+                    ->label('Jenis Kendaraan')
                     ->relationship('model', 'model_name')
                     ->required(),
-                // TextInput::make('car_plate')
-                //     ->label('Plat Mobil'),
                 FileUpload::make('image')
-                    ->label('Gambar Mobil')
+                    ->label('Gambar Kendaraan')
                     ->image()
                     ->directory('uploads/cars') //Direktori penyimpanan gambar mobil
                     ->maxSize(2048) //Batas ukuran file dalam KB
@@ -90,16 +88,19 @@ class CarResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('car_name')->label('Car Name')
+                TextColumn::make('car_name')->label('Nama Kendaraan')
                     ->searchable()
                     ->sortable(),
                 TextColumn::make('brand.brand_name')->label('Brand'),
-                TextColumn::make('model.model_name')->label('Model'),
-                // TextColumn::make('car_plate')->label('Car Plate'),
-                TextColumn::make('transmission')->label('Transmission'),
-                TextColumn::make('engine_capacity')->label('Engine Capacity'),
-                TextColumn::make('seat_capacity')->label('Seat Capacity'),
-                TextColumn::make('price')->label('Price'),
+                TextColumn::make('model.model_name')->label('Jenis Kendaraan'),
+                TextColumn::make('transmission')->label('Transmisi'),
+                TextColumn::make('engine_capacity')
+                    ->label('Kapasitas Mesin')
+                    ->formatStateUsing(fn ($state) => $state . ' CC'),
+                TextColumn::make('seat_capacity')->label('Kapasitas Kursi'),
+                TextColumn::make('price')
+                    ->label('Harga/Hari')
+                    ->formatStateUsing(fn ($state) => 'IDR ' . number_format($state, 0, ',', '.')),
             ])
             ->filters([
                 //

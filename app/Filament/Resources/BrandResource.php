@@ -23,12 +23,22 @@ class BrandResource extends Resource
 
     protected static ?string $navigationGroup = 'Kendaraan';
 
+    public static function getLabel(): string
+    {
+        return 'Brand Kendaraan';
+    }
+
+    public static function getPluralLabel(): string
+    {
+        return 'Brand Kendaraan';
+    }
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 TextInput::make('brand_name')
-                    ->label('Brand Name')
+                    ->label('Nama Brand Kendaraan')
                     ->required()
                     ->unique(Brand::class, 'brand_name'),
             ]);
@@ -39,7 +49,7 @@ class BrandResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('brand_name')
-                    ->label('Brand Name')
+                    ->label('Brand Kendaraan')
                     ->searchable()
                     ->sortable(),
             ])

@@ -357,7 +357,7 @@
                             <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">@bright_global_trans</span>
                         </a>
                     
-                        <a href="{{ $settings['facebook_link'] }}" class="fade-animation bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <a href="{{ $settings['tiktok_link'] }}" class="fade-animation bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
                             <img src="{{ asset('img/tiktok-hubungi-kami.svg') }}" alt="Facebook" class="w-8 md:w-10 flex-shrink-0">
                             <span class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">@brightglobaltrans</span>
                         </a>

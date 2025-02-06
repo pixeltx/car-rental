@@ -23,12 +23,22 @@ class CarModelResource extends Resource
 
     protected static ?string $navigationGroup = 'Kendaraan';
 
+    public static function getLabel(): string
+    {
+        return 'Jenis Kendaraan';
+    }
+
+    public static function getPluralLabel(): string
+    {
+        return 'Jenis Kendaraan';
+    }
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 TextInput::make('model_name')
-                    ->label('Model Name')
+                    ->label('Jenis Tipe Kendaraan')
                     ->required()
                     ->unique(CarModel::class, 'model_name'),
             ]);
@@ -39,7 +49,7 @@ class CarModelResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('model_name')
-                    ->label('Model Name')
+                    ->label('Tipe Kendaraan')
                     ->searchable()
                     ->sortable(),
             ])

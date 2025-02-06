@@ -26,34 +26,42 @@ class CarFacilityResource extends Resource
 
     protected static ?string $navigationGroup = 'Kendaraan';
 
+    public static function getLabel(): string
+    {
+        return 'Fasilitas Kendaraan';
+    }
+
+    public static function getPluralLabel(): string
+    {
+        return 'Fasilitas Kendaraan';
+    }
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Select::make('car_id')
+                    ->label('Kendaraan')
                     ->relationship('car', 'car_name')
                     ->required(),
-                TextInput::make('facility')
-                    ->required()
-                    ->maxLength(255),
-                // TextInput::make('icon')
-                //     ->required()
-                //     ->maxLength(255),
-                // Textarea::make('description'),
+                Select::make('facility_id')
+                    ->label('Fasilitas')
+                    ->relationship('facility', 'name')
+                    ->required(),
                 FileUpload::make('images')
-                ->label('Gambar')
-                ->multiple()
-                ->image()
-                ->directory('uploads/car_facilities')
-                ->disk('public') // Ensure the correct disk is used
-                ->maxFiles(3)
-                ->maxSize(2048)
-                ->saveRelationshipsUsing(function ($component, $state, $record) {
-                    $record->images()->delete();
-                    foreach ($state as $image) {
-                        $record->images()->create(['image' => $image]);
-                    }
-                }),
+                    ->label('Gambar')
+                    ->multiple()
+                    ->image()
+                    ->directory('uploads/car_facilities')
+                    ->disk('public') // Ensure the correct disk is used
+                    ->maxFiles(3)
+                    ->maxSize(2048)
+                    ->saveRelationshipsUsing(function ($component, $state, $record) {
+                        $record->images()->delete();
+                        foreach ($state as $image) {
+                            $record->images()->create(['image' => $image]);
+                        }
+                    }),
             ]);
     }
 
@@ -61,10 +69,8 @@ class CarFacilityResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('car.car_name')->label('Car'),
-                TextColumn::make('facility')->sortable()->searchable(),
-                // TextColumn::make('icon')->sortable()->searchable(),
-                // TextColumn::make('description')->sortable()->searchable(),
+                TextColumn::make('car.car_name')->label('Kendaraan')->sortable()->searchable(),
+                TextColumn::make('facility.name')->label('Fasilitas')->sortable()->searchable(),
             ])
             ->filters([
                 //

@@ -11,7 +11,7 @@ class CarFacility extends Model
 
     protected $fillable = [
         'car_id',
-        'facility',
+        'facility_id',
         'icon',
         'description',
     ];
@@ -19,6 +19,11 @@ class CarFacility extends Model
     public function car()
     {
         return $this->belongsTo(Car::class);
+    }
+
+    public function facility()
+    {
+        return $this->belongsTo(Facility::class);
     }
 
     public function images()
