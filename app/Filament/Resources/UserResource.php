@@ -11,6 +11,7 @@ use Filament\Resources\Resource;
 use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\BadgeColumn;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\UserResource\Pages;
@@ -40,12 +41,9 @@ class UserResource extends Resource
                     ->label('Password')
                     ->password()
                     ->required(),
-                Select::make('role')
+                Select::make('roles')
                     ->label('Role')
-                    ->options([
-                        'admin' => 'Admin',
-                        'user' => 'User',
-                    ])
+                    ->relationship('roles', 'name')
                     ->required(),
             ]);
     }
@@ -62,8 +60,13 @@ class UserResource extends Resource
                     ->label('Email')
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('role')
+                BadgeColumn::make('roles.name')
                     ->label('Role')
+                    ->colors([
+                        'primary',
+                        'secondary' => 'user',
+                        'success' => 'admin',
+                    ])
                     ->searchable()
                     ->sortable(),
             ])
