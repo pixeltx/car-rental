@@ -108,7 +108,7 @@ class CarResource extends Resource
                     ->label('Harga/Hari')
                     ->formatStateUsing(fn ($state) => 'IDR ' . number_format($state, 0, ',', '.')),
                 ToggleColumn::make('most_picked')
-                    ->label('Sering Dipilih'),
+                    ->label('Paling Populer'),
             ])
             ->filters([
                 //

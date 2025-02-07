@@ -14,7 +14,8 @@ class HomeController extends Controller
     {
         $cars = Car::with(['brand', 'model'])->get();
         $mostPickedCars = Car::where('most_picked', true)
-            ->with('facilities.facility')
+            // ->with('facilities.facility')
+            ->with(['brand', 'model'])
             ->orderBy('most_picked', 'desc')
             ->take(3)
             ->get(); // Untuk Fetch Data Mobil Terpopuler dengan relasi fasilitas
