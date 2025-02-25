@@ -77,8 +77,8 @@
                     <div class="h-28 flex items-center justify-center">
                         <img src="{{ asset('img/car.svg') }}" alt="Car Icon" class="w-20 md:w-28">
                     </div>
-                    <p class="text-center my-4 text-4xl md:text-5xl text-newGreen counter" data-target="200">
-                        0<span class="text-lg md:text-xl align-top text-newGold">+</span>
+                    <p class="text-center my-4 text-4xl md:text-5xl text-newGold counter" data-target="200">
+                        0<span class="text-lg md:text-xl align-top text-newGreen">+</span>
                     </p>
                     <p class="text-center text-hitam font-semibold text-base md:text-lg">
                         Kendaraan

@@ -37,9 +37,9 @@
         <!-- Sosial Media dan Legal -->
         <div class="flex flex-col md:flex-row md:justify-between items-center text-sm">
             <div class="flex space-x-4">
-                <a href="#" class="hover:text-gray-300">Gmail</a>
-                <a href="https://www.instagram.com/bright_global_trans/" class="hover:text-gray-300">Instagram</a>
-                <a href="#" class="hover:text-gray-300">Tiktok</a>
+                <a href="mailto:{{ $settings['email_address'] }}" class="hover:text-gray-300">Gmail</a>
+                <a href="{{ $settings['instagram_link'] }}" class="hover:text-gray-300">Instagram</a>
+                <a href="{{ $settings['tiktok_link'] }}" class="hover:text-gray-300">Tiktok</a>
             </div>
             <p class="mt-4 md:mt-0 text-gray-400">© 2025 Brightglobaltrans. All rights reserved.</p>
         </div>

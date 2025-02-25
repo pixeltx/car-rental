@@ -40,9 +40,9 @@ export default {
                 bigTitle: "#deaf37",
                 textGreen: "#4b5320",
                 newGreen: "#004225",
-                newGold: "#FFB000",
+                newGold: "#E6BA23",
                 putih: "#F5F5F5",
-                hitam:"#0C0404"
+                hitam: "#0C0404",
             },
             spacing: {
                 100: "75rem",

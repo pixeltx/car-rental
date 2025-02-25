@@ -2,13 +2,13 @@
     <div class="mx-4 sm:mx-6 lg:mx-16 mb-16 mt-[100px] md:mt-[120px]">
         <div class="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-6 gap-6">
             <!-- Section 1 -->
-            <div class="md:col-span-2 md:row-span-2 overflow-hidden">
-                <div class="shadow-lg">
+            <div class="bg-[#f0f0f0] md:col-span-2 md:row-span-2 overflow-hidden md:shadow-lg sm:shadow-lg shadow-lg">
+                <div class="">
                     <div class="bg-newGold uppercase text-center font-semibold text-2xl md:text-3xl py-4 md:py-6">
                         {{ $car->car_name }}
                     </div>
-                    <div class="bg-[#f0f0f0] flex justify-center items-center py-6 md:py-8">
-                        <div class="grid grid-cols-2 sm:grid-cols-3 md:flex gap-4 text-sm md:text-lg md:px-4">
+                    <div class=" flex justify-center items-center py-10 md:py-14">
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:flex gap-4 text-sm md:text-lg md:px-4 ">
                             <div class="flex items-center gap-2">
                                 <svg class="w-4 h-4 fill-newGold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M135.2 117.4L109.1 192H402.9l-26.1-74.6C372.3 104.6 360.2 96 346.6 96H165.4c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32H346.6c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2V400v48c0 17.7-14.3 32-32 32H448c-17.7 0-32-14.3-32-32V400H96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V400 256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"></path></svg>
                                 <span>{{ $car->model ? $car->model->model_name : 'Tidak Ada Model' }}</span>
@@ -76,12 +76,12 @@
             </div>
 
             <!-- Section 4 -->
-            <div class="md:col-span-2 md:row-span-4 overflow-hidden ">
-                <div class="shadow-lg rounded-lg ">
+            <div class="md:col-span-2 md:row-span-4 overflow-hidden shadow-lg bg-[#f0f0f0]">
+                <div class=" rounded-lg ">
                     <div class="bg-newGold uppercase text-center font-semibold text-2xl md:text-3xl py-4 md:py-6">
                         Description
                     </div>
-                    <div class="bg-[#f0f0f0] text-justify p-6 md:p-8 leading-relaxed">
+                    <div class=" text-justify p-6 md:p-8 leading-relaxed">
                         {{ $car->description }}
                     </div>
                 </div>

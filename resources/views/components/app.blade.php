@@ -50,7 +50,7 @@
     const phoneNumber = window.settings.phone_number || null;
 
         function showRuteKhusus() {
-            ruteContainer.style.opacity = "0"; // Mulai dengan opacity 0
+            ruteContainer.style.opacity = "0"; 
             setTimeout(() => {
                 ruteContainer.innerHTML = `
                             <div class="py-4">
