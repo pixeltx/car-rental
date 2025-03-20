@@ -130,40 +130,48 @@
             <div class="flex flex-col lg:flex-row gap-8 p-6">
                 <!-- Kontak Informasi -->
                 <div class="w-full lg:w-1/2 space-y-6">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 fade-animation">
-                        <!-- Kontak Item dengan Hover -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-6">
                         <a href="https://wa.me/{{ $settings['phone_number'] }}"
-                            class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                            class="fade-animation bg-newGold rounded-xl p-4 flex items-center gap-3 transition-transform transform hover:scale-105 hover:shadow-lg overflow-hidden">
                             <img src="{{ asset('img/wa-hubungi-kami.svg') }}" alt="WhatsApp"
-                                class="w-8 md:w-10 flex-shrink-0">
+                                class="w-8 sm:w-10 flex-shrink-0">
                             <span
-                                class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">0812-1495-5293</span>
+                                class="text-white font-semibold text-sm sm:text-base md:text-lg leading-tight truncate">
+                                0812-1495-5293
+                            </span>
                         </a>
 
                         <a href="mailto:{{ $settings['email_address'] }}"
-                            class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                            class="fade-animation bg-newGold rounded-xl p-4 flex items-center gap-3 transition-transform transform hover:scale-105 hover:shadow-lg overflow-hidden">
                             <img src="{{ asset('img/email-hubungi-kami.svg') }}" alt="Email"
-                                class="w-8 md:w-10 flex-shrink-0">
+                                class="w-8 sm:w-10 flex-shrink-0">
                             <span
-                                class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">Global@trans.com</span>
+                                class="text-white font-semibold text-sm sm:text-base md:text-lg leading-tight truncate">
+                                {{ $settings['email_address'] }}
+                            </span>
                         </a>
 
                         <a href="{{ $settings['instagram_link'] }}"
-                            class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
+                            class="fade-animation bg-newGold rounded-xl p-4 flex items-center gap-3 transition-transform transform hover:scale-105 hover:shadow-lg overflow-hidden">
                             <img src="{{ asset('img/ig-hubungi-kami.svg') }}" alt="Instagram"
-                                class="w-8 md:w-10 flex-shrink-0">
+                                class="w-8 sm:w-10 flex-shrink-0">
                             <span
-                                class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">@bright_global_trans</span>
+                                class="text-white font-semibold text-sm sm:text-base md:text-lg leading-tight truncate">
+                                @brightglobaltrans
+                            </span>
                         </a>
 
                         <a href="{{ $settings['tiktok_link'] }}"
-                            class="bg-newGold rounded-xl p-6 flex items-center gap-4 transition-transform transform hover:scale-105 hover:shadow-lg">
-                            <img src="{{ asset('img/tiktok-hubungi-kami.svg') }}" alt="Facebook"
-                                class="w-8 md:w-10 flex-shrink-0">
+                            class="fade-animation bg-newGold rounded-xl p-4 flex items-center gap-3 transition-transform transform hover:scale-105 hover:shadow-lg overflow-hidden">
+                            <img src="{{ asset('img/tiktok-hubungi-kami.svg') }}" alt="Tiktok"
+                                class="w-8 sm:w-10 flex-shrink-0">
                             <span
-                                class="text-base sm:text-md md:text-lg lg:text-xl font-semibold text-white">@brightglobaltrans</span>
+                                class="text-white font-semibold text-sm sm:text-base md:text-lg leading-tight truncate">
+                                @brightglobaltrans
+                            </span>
                         </a>
                     </div>
+
 
                 </div>
 

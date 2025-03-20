@@ -1,5 +1,7 @@
 new Swiper(".wrapper", {
     loop: true,
+    simulateTouch: true,
+    allowTouchMove: true,
 
     // If we need pagination
     pagination: {
