@@ -7,7 +7,7 @@
             <div>
                 <a href="{{ route('index') }}" class="flex items-center mb-4">
                     <img src="{{ asset('img/Logo.png') }}" alt="Logo" class="h-12 mr-3">
-                    <span class="text-2xl font-semibold">Brightglobaltrans</span>
+                    <span class="text-2xl font-semibold">Bright Global Trans</span>
                 </a>
                 <p class="text-sm text-gray-300">Brightglobaltrans adalah penyedia layanan rental mobil terpercaya dengan berbagai pilihan kendaraan untuk kebutuhan Anda.</p>
             </div>

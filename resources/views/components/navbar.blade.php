@@ -9,41 +9,47 @@
                 <a href="{{ route('index') }}" class="flex justify-center items-center gap-2 mr-4 md:mr-0">
                     <img class="w-14 my-3 cursor-pointer" src="{{ asset('img/Logo.png') }}" alt="Logo">
                     <div class="text-putih text-sm md:text-lg">
-                        BrightGlobaltrans
+                        Bright Global trans
                     </div>
                 </a>
 
                 <!-- Navigation Links -->
-                <div class="nav-links lg:static absolute bg-newGreen lg:min-h-fit min-h-[50vh] md:min-h-[30vh] left-0 top-0 lg:w-auto w-full flex items-center px-5 lg:translate-x-0 transform -translate-x-full duration-300">
+                <div
+                    class="nav-links lg:static absolute bg-newGreen lg:min-h-fit min-h-[50vh] md:min-h-[30vh] left-0 top-0 lg:w-auto w-full flex items-center px-5 lg:translate-x-0 transform -translate-x-full duration-300">
                     <ul class="flex lg:flex-row flex-col lg:items-center lg:gap-[4vw] gap-8 text-putih">
                         <li>
                             <a href="{{ route('index') }}" class="relative group ">
                                 Home
-                                <span class="absolute left-0 bottom-0 h-[2px] bg-newGold transition-all duration-300 {{ request()->routeIs('index') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                                <span
+                                    class="absolute left-0 bottom-0 h-[2px] bg-newGold transition-all duration-300 {{ request()->routeIs('index') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('rent') }}" class="relative group ">
                                 Mobil
-                                <span class="absolute left-0 bottom-0 h-[2px] bg-newGold transition-all duration-300 {{ request()->routeIs('rent') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                                <span
+                                    class="absolute left-0 bottom-0 h-[2px] bg-newGold transition-all duration-300 {{ request()->routeIs('rent') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('testimoni') }}" class="relative group ">
                                 Testimoni
-                                <span class="absolute left-0 bottom-0 h-[2px] bg-newGold transition-all duration-300 {{ request()->routeIs('testimoni') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                                <span
+                                    class="absolute left-0 bottom-0 h-[2px] bg-newGold transition-all duration-300 {{ request()->routeIs('testimoni') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('aboutus') }}" class="relative group ">
                                 Tentang Kami
-                                <span class="absolute left-0 bottom-0 h-[2px] bg-newGold transition-all duration-300 {{ request()->routeIs('aboutus') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                                <span
+                                    class="absolute left-0 bottom-0 h-[2px] bg-newGold transition-all duration-300 {{ request()->routeIs('aboutus') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('information') }}" class="relative group ">
                                 Informasi
-                                <span class="absolute left-0 bottom-0 h-[2px] bg-newGold transition-all duration-300 {{ request()->routeIs('information') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
+                                <span
+                                    class="absolute left-0 bottom-0 h-[2px] bg-newGold transition-all duration-300 {{ request()->routeIs('information') ? 'w-full' : 'w-0 group-hover:w-full' }}"></span>
                             </a>
                         </li>
                     </ul>
@@ -51,10 +57,12 @@
 
                 <!-- Kontak Button & Hamburger Icon -->
                 <div class="flex items-center gap-2 lg:gap-6">
-                    <a href="https://wa.me/{{ $settings['phone_number'] }}" class="bg-newGold text-putih border-2 border-newGold hover:bg-transparent hover:text-newGold px-5 py-2 rounded-full transition duration-300">
+                    <a href="https://wa.me/{{ $settings['phone_number'] }}"
+                        class="bg-newGold text-putih border-2 border-newGold hover:bg-transparent hover:text-newGold px-5 py-2 rounded-full transition duration-300">
                         Kontak
                     </a>
-                    <ion-icon name="menu" class="text-3xl cursor-pointer lg:hidden text-putih" onclick="toggleMenu()"></ion-icon>
+                    <ion-icon name="menu" class="text-3xl cursor-pointer lg:hidden text-putih"
+                        onclick="toggleMenu()"></ion-icon>
                 </div>
             </nav>
         </header>
@@ -86,6 +94,7 @@
 
         // Toggle menu for mobile
         const navLinks = document.querySelector('.nav-links');
+
         function toggleMenu() {
             navLinks.classList.toggle('translate-x-0');
         }
