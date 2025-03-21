@@ -9,7 +9,8 @@
                     <img src="{{ asset('img/Logo.png') }}" alt="Logo" class="h-12 mr-3">
                     <span class="text-2xl font-semibold">Bright Global Trans</span>
                 </a>
-                <p class="text-sm text-gray-300">Brightglobaltrans adalah penyedia layanan rental mobil terpercaya dengan berbagai pilihan kendaraan untuk kebutuhan Anda.</p>
+                <p class="text-sm text-gray-300">Bright Global Trans adalah penyedia layanan rental mobil terpercaya
+                    dengan berbagai pilihan kendaraan untuk kebutuhan Anda.</p>
             </div>
 
             <!-- Navigasi dan Info Kontak -->
@@ -25,9 +26,12 @@
 
             <div>
                 <h2 class="text-sm font-semibold uppercase mb-4">Hubungi Kami</h2>
-                <p class="text-sm text-gray-300">Jl. Mekarwangi No.79, Sariwangi, Kec. Parongpong, Kabupaten Bandung Barat, Jawa Barat 40559</p>
-                <p class="text-sm text-gray-300">Telepon: <a href="tel:{{ $settings['phone_number'] }}" class="hover:underline">{{ $settings['phone_number'] }}</a></p>
-                <p class="text-sm text-gray-300">Email: <a href="mailto:{{ $settings['email_address'] }}" class="hover:underline">{{ $settings['email_address'] }}</a></p>
+                <p class="text-sm text-gray-300">Jl. Mekarwangi No.79, Sariwangi, Kec. Parongpong, Kabupaten Bandung
+                    Barat, Jawa Barat 40559</p>
+                <p class="text-sm text-gray-300">Telepon: <a href="tel:{{ $settings['phone_number'] }}"
+                        class="hover:underline">{{ $settings['phone_number'] }}</a></p>
+                <p class="text-sm text-gray-300">Email: <a href="mailto:{{ $settings['email_address'] }}"
+                        class="hover:underline">{{ $settings['email_address'] }}</a></p>
             </div>
         </div>
 

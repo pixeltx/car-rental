@@ -1,31 +1,35 @@
 <x-app :settings="$settings" title="Beranda">
-
     <div class="overflow-hidden mt-[30px]">
-        <div class="mb-20 ">
+        <div class="mb-20">
             <div id="gallery" class="relative w-full" data-carousel="slide">
                 <!-- Carousel wrapper -->
-                <div class="relative h-[100vh] md:min-h-screen overflow-hidden ">
+                <div class="relative h-[100vh] md:min-h-screen sm:h-[70vh] overflow-hidden">
                     <!-- Slider Images -->
                     <div class="absolute inset-0 z-10">
                         <div class="hidden duration-1000 ease-in-out" data-carousel-item>
                             <img src="{{ asset('img/rmada-bgt-slider-1.jpg') }}"
-                                class="absolute block w-full h-full object-cover " alt="">
+                                class="absolute block w-full h-full object-cover md:object-cover sm:object-contain sm:object-center"
+                                alt="">
                         </div>
                         <div class="hidden duration-1000 ease-in-out" data-carousel-item="active">
                             <img src="{{ asset('img/rmada-bgt-slider-2.jpg') }}"
-                                class="absolute block w-full h-full object-cover " alt="">
+                                class="absolute block w-full h-full object-cover md:object-cover sm:object-contain sm:object-center"
+                                alt="">
                         </div>
                         <div class="hidden duration-1000 ease-in-out" data-carousel-item>
                             <img src="{{ asset('img/rmada-bgt-slider-3.jpg') }}"
-                                class="absolute block w-full h-full object-cover " alt="">
+                                class="absolute block w-full h-full object-cover md:object-cover sm:object-contain sm:object-center"
+                                alt="">
                         </div>
                         <div class="hidden duration-1000 ease-in-out" data-carousel-item>
                             <img src="{{ asset('img/rmada-bgt-slider-4.jpg') }}"
-                                class="absolute block w-full h-full object-cover " alt="">
+                                class="absolute block w-full h-full object-cover md:object-cover sm:object-contain sm:object-center"
+                                alt="">
                         </div>
                         <div class="hidden duration-1000 ease-in-out" data-carousel-item>
                             <img src="{{ asset('img/rmada-bgt-slider-5.jpg') }}"
-                                class="absolute block w-full h-full object-cover " alt="">
+                                class="absolute block w-full h-full object-cover md:object-cover sm:object-contain sm:object-center"
+                                alt="">
                         </div>
                     </div>
 
@@ -34,7 +38,7 @@
                         class="fade-animation absolute inset-0 z-20 flex flex-col items-center justify-center px-6 md:px-16 text-center text-white">
                         <h1
                             class="font-[Poppins] text-3xl md:text-5xl lg:text-6xl font-bold text-newGold drop-shadow-xl mb-5">
-                            Bright Global trans
+                            Bright Global Trans
                         </h1>
                         <div class="bg-black/40 p-4 md:p-6 rounded-lg">
                             <p class="text-sm md:text-lg lg:text-xl text-white font-medium drop-shadow-xl">
@@ -57,35 +61,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- Slider Controls -->
-                <button type="button"
-                    class="hidden absolute top-0 left-0 z-40 md:flex items-center justify-center h-full px-4 group focus:outline-none"
-                    data-carousel-prev>
-                    <span
-                        class="inline-flex items-center justify-center w-10 h-10 bg-hitam/30 rounded-full group-hover:bg-hitam/50 transition duration-300">
-                        <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M5 1 1 5l4 4" />
-                        </svg>
-                        <span class="sr-only">Previous</span>
-                    </span>
-                </button>
-                <button type="button"
-                    class="hidden absolute top-0 right-0 z-40 md:flex items-center justify-center h-full px-4 group focus:outline-none"
-                    data-carousel-next>
-                    <span
-                        class="inline-flex items-center justify-center w-10 h-10 bg-hitam/30 rounded-full group-hover:bg-hitam/50 transition duration-300">
-                        <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 9 4-4-4-4" />
-                        </svg>
-                        <span class="sr-only">Next</span>
-                    </span>
-                </button>
             </div>
         </div>
+
 
         <div class="px-8 md:px-28">
             <div class="flex flex-row flex-wrap justify-center gap-6 lg:gap-10">

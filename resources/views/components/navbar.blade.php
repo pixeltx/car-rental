@@ -9,7 +9,7 @@
                 <a href="{{ route('index') }}" class="flex justify-center items-center gap-2 mr-4 md:mr-0">
                     <img class="w-14 my-3 cursor-pointer" src="{{ asset('img/Logo.png') }}" alt="Logo">
                     <div class="text-putih text-sm md:text-lg">
-                        Bright Global trans
+                        Bright Global Trans
                     </div>
                 </a>
 
